@@ -25,8 +25,12 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li`
   position: relative;
-  border-left: 1px solid #1e2d3d;
   border-right: 1px solid #1e2d3d;
+
+  &:first-child,
+  &:last-child {
+    border-left: 1px solid #1e2d3d;
+  }
 
   &:last-child {
     margin-left: auto;
@@ -41,6 +45,8 @@ export const Link = styled(NavLink)`
 
   text-decoration: none;
 
+  transition: color 200ms linear;
+
   &::before {
     content: '';
     position: absolute;
@@ -48,15 +54,20 @@ export const Link = styled(NavLink)`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1px;
 
     transform: scaleX(0);
     transition: transform 200ms linear;
 
-    border-bottom: 3px solid #fea55f;
+    border-bottom: 2px solid #5565e8;
   }
 
-  &:hover::before {
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+
+  &:hover::before,
+  &:focus::before {
     transform: scaleX(1);
   }
 
