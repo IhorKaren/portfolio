@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  height: 100%;
+
+  border-radius: 8px;
+  border: 1px solid #1e2d3d;
+  background-color: #011627;
 `;

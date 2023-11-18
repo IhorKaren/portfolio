@@ -1,10 +1,30 @@
-/* @import-normalize; bring in normalize.css styles */
+@import-normalize;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'FiraCode';
+  src: local('FiraCode-Regular'), local('FiraCode-Medium'),
+    local('FiraCode-SemiBold'),
+    url('./fonts/FiraCode-Regular.ttf') format('truetype'),
+    url('./fonts/FiraCode-Medium.ttf') format('truetype'),
+    url('./fonts/FiraCode-SemiBold.ttf') format('truetype');
+}
 
 body {
+  padding: 30px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+
+  color: #607b96;
+  background-color: #010c15;
+
+  font-family: 'FiraCode', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,4 +32,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
