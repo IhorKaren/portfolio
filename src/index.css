@@ -19,6 +19,8 @@ body {
   padding: 30px;
   margin: 0;
 
+  font-size: 16px;
+  line-height: normal;
   color: #607b96;
   background-color: #010c15;
 
@@ -37,6 +39,20 @@ code {
 * {
   box-sizing: border-box;
   padding: 0;
+  margin: 0;
+}
+
+main {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
