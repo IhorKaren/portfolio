@@ -5,13 +5,14 @@ export const PageHeader = styled.header`
   display: flex;
   width: 100%;
   align-items: center;
-  gap: 10%;
-  padding: 0 0 0 22px;
+  padding: 0 0 0 21px;
 
   border-bottom: 1px solid #1e2d3d;
+  background-color: #011627;
 `;
 
 export const Name = styled.p`
+  width: 278px;
   flex-shrink: 0;
 `;
 

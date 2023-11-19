@@ -31,10 +31,10 @@ const Greeting = () => {
             </li>
           </CommentsList>
           <LinkThumb>
-            <p>
+            <span>
               <AccentColor>const</AccentColor>{' '}
               <AccentColor>githubLink</AccentColor> <AccentColor>=</AccentColor>{' '}
-            </p>
+            </span>
             <Link
               href="https://github.com/IhorKaren/portfolio"
               target="_blank"

@@ -11,6 +11,7 @@ export const PageFooter = styled.footer`
   padding: 0 0 0 22px;
 
   border-top: 1px solid #1e2d3d;
+  background-color: #011627;
 `;
 
 export const Hint = styled.p`
