@@ -14,5 +14,14 @@ export const TextList = styled.ul`
   padding: 20px 20px 200px 0;
   border-right: 1px solid #1e2d3d;
 
-  overflow-y: auto;
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    background-color: #011627;
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #607b96;
+  }
 `;
