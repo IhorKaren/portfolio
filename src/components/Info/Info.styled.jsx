@@ -41,11 +41,18 @@ export const InfoLink = styled(NavLink)`
   color: #607b96;
   text-decoration: none;
 
+  transition: color 200ms linear;
+
   &.active {
     color: #fff;
   }
 
   &.active ${Arrow} {
     transform: rotate(90deg);
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
   }
 `;

@@ -1,15 +1,11 @@
-import { TitleWrap, Title, InfoList, Arrow, InfoLink } from './Info.styled';
-import { BsCaretDownFill, BsFillFolderFill } from 'react-icons/bs';
+import { InfoList, Arrow, InfoLink } from './Info.styled';
+import {  BsFillFolderFill } from 'react-icons/bs';
+import MenuTitle from 'components/MenuTitle/MenuTitle';
 
 const Info = () => {
   return (
     <div>
-      <TitleWrap>
-        <Title>
-          <BsCaretDownFill size={14} />
-          personal-info
-        </Title>
-      </TitleWrap>
+      <MenuTitle title="personal-info" />
       <InfoList>
         <li>
           <InfoLink to="bio">

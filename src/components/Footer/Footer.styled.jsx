@@ -9,6 +9,7 @@ export const PageFooter = styled.footer`
   gap: 18px;
   align-items: center;
   padding: 0 0 0 22px;
+  z-index: 6;
 
   border-top: 1px solid #1e2d3d;
   background-color: #011627;

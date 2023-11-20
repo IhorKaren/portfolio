@@ -6,7 +6,7 @@ import {
   SocialLink,
 } from './Footer.styled';
 
-import { BsLinkedin, BsDiscord, BsGithub } from 'react-icons/bs';
+import { BsLinkedin, BsTelegram, BsGithub } from 'react-icons/bs';
 
 const Footer = () => {
   return (
@@ -25,12 +25,12 @@ const Footer = () => {
         </SocialListItem>
         <SocialListItem>
           <SocialLink
-            href="https://discordapp.com/users/ihorkaren"
+            href="https://t.me/IhorKaren"
             target="_blank"
             rel="noreferrer"
-            aria-label="discord link"
+            aria-label="telegram link"
           >
-            <BsDiscord size={24} />
+            <BsTelegram size={24} />
           </SocialLink>
         </SocialListItem>
         <SocialListItem>
