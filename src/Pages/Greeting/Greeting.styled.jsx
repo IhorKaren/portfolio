@@ -73,7 +73,7 @@ export const Green = styled.div`
   position: absolute;
   left: 50%;
   top: 15%;
-  z-index: 2;
+  z-index: 8;
   width: 454px;
   height: 492px;
   transform: rotate(-94.305deg);
@@ -87,7 +87,7 @@ export const Blue = styled.div`
   position: absolute;
   left: 50%;
   top: 30%;
-  z-index: 1;
+  z-index: 7;
   width: 454px;
   height: 492px;
   transform: rotate(13.508deg);
