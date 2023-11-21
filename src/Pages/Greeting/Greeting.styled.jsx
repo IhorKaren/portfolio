@@ -55,11 +55,11 @@ export const Link = styled.a`
 export const AccentColor = styled.span`
   color: #43d9ad;
 
-  &:first-child {
+  &:first-of-type {
     color: #4d5bce;
   }
 
-  &:last-child {
+  &:last-of-type {
     color: #ffffff;
   }
 `;
