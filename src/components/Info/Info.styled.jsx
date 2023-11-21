@@ -1,4 +1,4 @@
-import styled from "@emotion/styled/macro";
+import styled from '@emotion/styled/macro';
 import { NavLink } from 'react-router-dom';
 import { BsChevronRight } from 'react-icons/bs';
 
@@ -6,7 +6,7 @@ export const InfoList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 10px 14px;
+  padding: 10px 14px 32px 14px;
 `;
 
 export const Arrow = styled(BsChevronRight)`

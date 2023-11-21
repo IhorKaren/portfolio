@@ -50,7 +50,6 @@ export const AsideLink = styled(NavLink)`
 export const ChildrenContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 28px;
 `;
 
 export const SubHeader = styled.div`
