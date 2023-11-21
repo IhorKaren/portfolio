@@ -1,22 +1,6 @@
-import styled from 'styled-components';
+import styled from "@emotion/styled/macro";
 import { NavLink } from 'react-router-dom';
 import { BsChevronRight } from 'react-icons/bs';
-
-export const TitleWrap = styled.div`
-  padding: 10px 14px;
-
-  border-bottom: 1px solid #1e2d3d;
-`;
-
-export const Title = styled.h2`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-
-  font-weight: 400;
-  font-size: 16px;
-`;
 
 export const InfoList = styled.ul`
   display: flex;

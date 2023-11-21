@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const PageFooter = styled.footer`
   position: absolute;
@@ -27,12 +27,12 @@ export const SocialsList = styled.ul`
 export const SocialListItem = styled.li`
   border-right: 1px solid #1e2d3d;
 
-  &:first-child,
-  &:last-child {
+  &:first-of-type,
+  &:last-of-type {
     border-left: 1px solid #1e2d3d;
   }
 
-  &:last-child {
+  &:last-of-type {
     margin-left: auto;
     border-right: none;
   }

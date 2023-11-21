@@ -9,7 +9,7 @@ const Info = () => {
       <InfoList>
         <li>
           <InfoLink to="bio">
-            <Arrow size={12} />
+            <Arrow size={12} data="arrow"/>
             <BsFillFolderFill color="#43d9ad" />
             bio
           </InfoLink>

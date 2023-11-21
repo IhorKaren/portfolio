@@ -1,4 +1,11 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+
+export const Borders = styled.div`
+  width: 110%;
+
+  border-top: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
+`;
 
 export const ContactsList = styled.ul`
   display: flex;

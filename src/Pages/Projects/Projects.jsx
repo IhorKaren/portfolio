@@ -1,5 +1,12 @@
+import Aside from 'components/Aside/Aside';
+import Filter from 'components/Filter/Filter';
+
 const Projects = () => {
-  return <div>Projects</div>;
+  return (
+    <Aside text="projects">
+      <Filter />
+    </Aside>
+  );
 };
 
 export default Projects;

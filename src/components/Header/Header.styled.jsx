@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const PageHeader = styled.header`
@@ -28,12 +28,12 @@ export const NavItem = styled.li`
   position: relative;
   border-right: 1px solid #1e2d3d;
 
-  &:first-child,
-  &:last-child {
+  &:first-of-type,
+  &:last-of-type {
     border-left: 1px solid #1e2d3d;
   }
 
-  &:last-child {
+  &:last-of-type {
     margin-left: auto;
     border-right: none;
   }

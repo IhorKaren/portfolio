@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const PageWrap = styled.div`
   padding: 0 20px 0 340px;
@@ -11,7 +11,7 @@ export const TextList = styled.ul`
 
   flex-direction: column;
   gap: 8px;
-  padding: 20px 20px 200px 0;
+  padding: 20px 20px 240px 0;
   border-right: 1px solid #1e2d3d;
 
   overflow-y: scroll;

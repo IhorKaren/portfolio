@@ -1,5 +1,12 @@
+import Aside from 'components/Aside/Aside';
+import Contacts from 'components/Contacts/Contacts';
+
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <Aside text="contacts">
+      <Contacts />
+    </Aside>
+  );
 };
 
 export default Contact;
