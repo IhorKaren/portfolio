@@ -21,7 +21,7 @@ const About = () => {
     <>
       <Aside text="personal-info">
         <Info />
-        <Contacts isNeedBorders />
+        <Contacts isNeedBorder />
       </Aside>
       <AboutWrap>
         <Outlet />

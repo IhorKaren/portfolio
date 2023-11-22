@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const PageHeader = styled.header`
+  
   display: flex;
   width: 100%;
   align-items: center;

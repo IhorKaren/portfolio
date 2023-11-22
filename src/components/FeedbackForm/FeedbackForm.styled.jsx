@@ -14,11 +14,8 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 120px 15px;
+  padding: 140px 15px 0 15px;
   gap: 24px;
-  width: 100vw;
-  min-width: 140px;
-  max-width: 372px;
 `;
 
 export const InputWrap = styled.div`
@@ -27,6 +24,9 @@ export const InputWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100vh;
+  min-width: 140px;
+  max-width: 372px;
 `;
 
 export const StyledLabel = styled.label`

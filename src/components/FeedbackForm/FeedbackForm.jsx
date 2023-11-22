@@ -18,7 +18,7 @@ const schema = Yup.object().shape({
   message: Yup.string().required('message is required!').min(10),
 });
 
-const FeedbackForm = ({ sendFeedback }) => {
+const FeedbackForm = ({ sendFeedback, onMassegeChange }) => {
   const {
     register,
     handleSubmit,
@@ -29,13 +29,10 @@ const FeedbackForm = ({ sendFeedback }) => {
   });
 
   const onSubmit = (data, e) => {
-    console.log(data.name, data.email);
     reset();
   };
 
-  const checker = e => {
-    console.log(e.target.value);
-  };
+  const checker = e => {};
 
   return (
     <>
@@ -46,7 +43,7 @@ const FeedbackForm = ({ sendFeedback }) => {
             autoComplete="off"
             type="text"
             id="name"
-            placeholder='Name'
+            placeholder="Name"
             {...register('name')}
             onChange={checker}
           />
@@ -55,9 +52,10 @@ const FeedbackForm = ({ sendFeedback }) => {
         <InputWrap>
           <StyledLabel htmlFor="email">_email:</StyledLabel>
           <StyledInput
+            autoComplete="off"
             type="email"
             id="email"
-            placeholder='example@mail.com'
+            placeholder="example@mail.com"
             {...register('email')}
             onChange={checker}
           />
@@ -69,9 +67,9 @@ const FeedbackForm = ({ sendFeedback }) => {
             autoComplete="off"
             type="text"
             id="message"
-            placeholder='Your message...'
+            placeholder="Your message..."
             {...register('message')}
-            onChange={checker}
+            onChange={e => onMassegeChange(e)}
           />
           {errors.message && <Error>{errors.message?.message}</Error>}
         </InputWrap>

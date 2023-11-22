@@ -1,12 +1,10 @@
-import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './Layout/Layout';
-
-const Greeting = lazy(() => import('../Pages/Greeting/Greeting'));
-const About = lazy(() => import('../Pages/About/About'));
-const Bio = lazy(() => import('../Pages/Bio/Bio'));
-const Projects = lazy(() => import('../Pages/Projects/Projects'));
-const Contact = lazy(() => import('../Pages/Contact/Contact'));
+import Greeting from 'Pages/Greeting/Greeting';
+import About from 'Pages/About/About';
+import Bio from 'Pages/Bio/Bio';
+import Projects from 'Pages/Projects/Projects';
+import Contact from 'Pages/Contact/Contact';
 
 export const App = () => {
   return (

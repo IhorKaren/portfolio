@@ -1,14 +1,14 @@
-import { Borders, ContactsList, ContanctLink } from './Contacts.styled';
+import { Border, ContactsList, ContanctLink } from './Contacts.styled';
 import { BsFillEnvelopeAtFill, BsTelephoneFill } from 'react-icons/bs';
 import MenuTitle from 'components/MenuTitle/MenuTitle';
 
-const Contacts = ({ isNeedBorders }) => {
+const Contacts = ({ isNeedBorder }) => {
   return (
     <div>
-      {isNeedBorders ? (
-        <Borders>
+      {isNeedBorder ? (
+        <Border>
           <MenuTitle title="contacts" />
-        </Borders>
+        </Border>
       ) : (
         <MenuTitle title="contacts" />
       )}

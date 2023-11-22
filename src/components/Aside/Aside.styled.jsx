@@ -3,7 +3,6 @@ import { Link, NavLink } from 'react-router-dom';
 
 export const PageAside = styled.aside`
   position: absolute;
-  top: 0;
   left: 0;
   display: flex;
   height: 100%;
@@ -16,9 +15,6 @@ export const PageAside = styled.aside`
 `;
 
 export const AsideNav = styled.nav`
-  height: 100%;
-  z-index: 3;
-
   border-right: 1px solid #1e2d3d;
   background-color: #011627;
 `;
@@ -31,6 +27,8 @@ export const AsideNavList = styled.ul`
 `;
 
 export const AsideLink = styled(NavLink)`
+  display: flex;
+  align-items: center;
   padding: 15px;
 
   color: #607b96;
@@ -50,13 +48,12 @@ export const AsideLink = styled(NavLink)`
 export const ChildrenContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 export const SubHeader = styled.div`
-  position: relative;
   width: 100%;
-  top: 0;
-  right: 0;
+
   padding-left: 300px;
 
   border-bottom: 1px solid #1e2d3d;

@@ -1,7 +1,10 @@
 import styled from '@emotion/styled';
 
 export const TitleWrap = styled.div`
+  width: 100%;
   padding: 10px 0 10px 14px;
+
+  border-bottom: 1px solid #1e2d3d;
 `;
 
 export const Title = styled.h3`
