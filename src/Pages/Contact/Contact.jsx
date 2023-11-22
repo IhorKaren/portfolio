@@ -6,7 +6,17 @@ import { PageContainer } from './Contact.styled';
 import { useState } from 'react';
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
+  const handleNameChange = e => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = e => {
+    setEmail(e.target.value);
+  };
 
   const handleMessageChange = e => {
     setMessage(e.target.value);
@@ -18,8 +28,12 @@ const Contact = () => {
         <Contacts />
       </Aside>
       <PageContainer>
-        <FeedbackForm onMassegeChange={handleMessageChange} />
-        <FormDecoration message={message} />
+        <FeedbackForm
+          onNameChange={handleNameChange}
+          onEmailChange={handleEmailChange}
+          onMassegeChange={handleMessageChange}
+        />
+        <FormDecoration name={name} email={email} message={message} />
       </PageContainer>
     </>
   );

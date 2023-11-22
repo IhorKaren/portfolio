@@ -13,7 +13,8 @@ const appear = keyframes`
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
   padding: 140px 15px 0 15px;
   gap: 24px;
 `;

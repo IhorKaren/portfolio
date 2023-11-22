@@ -18,7 +18,7 @@ const schema = Yup.object().shape({
   message: Yup.string().required('message is required!').min(10),
 });
 
-const FeedbackForm = ({ sendFeedback, onMassegeChange }) => {
+const FeedbackForm = ({ sendFeedback,onNameChange,onEmailChange, onMassegeChange }) => {
   const {
     register,
     handleSubmit,
@@ -32,8 +32,6 @@ const FeedbackForm = ({ sendFeedback, onMassegeChange }) => {
     reset();
   };
 
-  const checker = e => {};
-
   return (
     <>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
@@ -41,11 +39,12 @@ const FeedbackForm = ({ sendFeedback, onMassegeChange }) => {
           <StyledLabel htmlFor="name">_name:</StyledLabel>
           <StyledInput
             autoComplete="off"
+            maxLength={30}
             type="text"
             id="name"
             placeholder="Name"
             {...register('name')}
-            onChange={checker}
+            onChange={onNameChange}
           />
           {errors.name && <Error>{errors.name?.message}</Error>}
         </InputWrap>
@@ -53,11 +52,12 @@ const FeedbackForm = ({ sendFeedback, onMassegeChange }) => {
           <StyledLabel htmlFor="email">_email:</StyledLabel>
           <StyledInput
             autoComplete="off"
+            maxLength={30}
             type="email"
             id="email"
             placeholder="example@mail.com"
             {...register('email')}
-            onChange={checker}
+            onChange={onEmailChange}
           />
           {errors.email && <Error>{errors.email?.message}</Error>}
         </InputWrap>
@@ -69,7 +69,7 @@ const FeedbackForm = ({ sendFeedback, onMassegeChange }) => {
             id="message"
             placeholder="Your message..."
             {...register('message')}
-            onChange={e => onMassegeChange(e)}
+            onChange={onMassegeChange}
           />
           {errors.message && <Error>{errors.message?.message}</Error>}
         </InputWrap>

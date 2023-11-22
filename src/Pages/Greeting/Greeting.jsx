@@ -8,8 +8,8 @@ import {
   Link,
   AccentColor,
   Decoration,
-  Green,
-  Blue,
+  GreenStain,
+  BlueStain,
 } from './Greeting.styled';
 
 const Greeting = () => {
@@ -46,8 +46,8 @@ const Greeting = () => {
         </div>
       </Thumb>
       <Decoration>
-        <Green />
-        <Blue />
+        <GreenStain />
+        <BlueStain />
       </Decoration>
     </>
   );

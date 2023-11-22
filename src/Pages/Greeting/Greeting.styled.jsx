@@ -69,7 +69,7 @@ export const Decoration = styled.div`
   height: 100%;
 `;
 
-export const Green = styled.div`
+export const GreenStain = styled.div`
   position: absolute;
   left: 50%;
   top: 15%;
@@ -83,7 +83,7 @@ export const Green = styled.div`
   filter: blur(87px);
 `;
 
-export const Blue = styled.div`
+export const BlueStain = styled.div`
   position: absolute;
   left: 50%;
   top: 30%;
