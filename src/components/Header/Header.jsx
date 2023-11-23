@@ -7,6 +7,7 @@ import {
   NavItem,
   Link,
   MenuButton,
+  Backdrop,
 } from './Header.styled';
 import { BsXLg, BsTextRight } from 'react-icons/bs';
 
@@ -16,6 +17,10 @@ const Header = () => {
   return (
     <PageHeader>
       <Name>ihor-karen</Name>
+      <Backdrop
+        className={menuIsOpen ? '' : 'hidden'}
+        onClick={() => setMenuIsOpen(false)}
+      ></Backdrop>
       <Nav className={menuIsOpen ? 'open' : ''}>
         <NavList>
           <NavItem>

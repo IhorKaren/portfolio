@@ -37,6 +37,7 @@ export const Nav = styled.nav`
   height: 100%;
 
   opacity: 0;
+  pointer-events: none;
 
   transition: opacity 400ms linear;
   backdrop-filter: blur(60px);
@@ -44,6 +45,7 @@ export const Nav = styled.nav`
   &.open {
     @media screen and (max-width: 1023px) {
       opacity: 1;
+      pointer-events: all;
     }
   }
 
@@ -151,14 +153,31 @@ export const Link = styled(NavLink)`
 `;
 
 export const MenuButton = styled.button`
+  position: relative;
+  z-index: 10;
+
   color: #607b96;
   background-color: transparent;
-  
+
   border: none;
 
   cursor: pointer;
 
   @media screen and (min-width: 1024px) {
+    display: none;
+  }
+`;
+
+export const Backdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+  pointer-events: all;
+
+  &.hidden {
     display: none;
   }
 `;
