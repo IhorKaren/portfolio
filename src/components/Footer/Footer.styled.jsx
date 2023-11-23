@@ -8,15 +8,24 @@ export const PageFooter = styled.footer`
   width: 100%;
   gap: 18px;
   align-items: center;
-  padding: 0 0 0 22px;
+  padding: 0;
   z-index: 6;
 
   border-top: 1px solid #1e2d3d;
   background-color: #011627;
+
+  @media screen and (min-width: 475px) {
+    padding: 0 0 0 22px;
+  }
 `;
 
 export const Hint = styled.p`
+  display: none;
   flex-shrink: 0;
+
+  @media screen and (min-width: 475px) {
+    display: block;
+  }
 `;
 
 export const SocialsList = styled.ul`
@@ -27,7 +36,6 @@ export const SocialsList = styled.ul`
 export const SocialListItem = styled.li`
   border-right: 1px solid #1e2d3d;
 
-  &:first-of-type,
   &:last-of-type {
     border-left: 1px solid #1e2d3d;
   }
@@ -35,6 +43,12 @@ export const SocialListItem = styled.li`
   &:last-of-type {
     margin-left: auto;
     border-right: none;
+  }
+
+  @media screen and (min-width: 475px) {
+    &:first-of-type {
+      border-left: 1px solid #1e2d3d;
+    }
   }
 `;
 

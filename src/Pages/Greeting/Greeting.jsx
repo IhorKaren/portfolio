@@ -36,11 +36,11 @@ const Greeting = () => {
               <AccentColor>githubLink</AccentColor> <AccentColor>=</AccentColor>{' '}
             </span>
             <Link
-              href="https://github.com/IhorKaren/portfolio"
+              href="https://github.com/IhorKaren"
               target="_blank"
               rel="noreferrer"
             >
-              “https://github.com/IhorKaren/portfolio”
+              “https://github.com/IhorKaren”
             </Link>
           </LinkThumb>
         </div>

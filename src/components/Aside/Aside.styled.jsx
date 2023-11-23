@@ -29,7 +29,7 @@ export const AsideNavList = styled.ul`
 export const AsideLink = styled(NavLink)`
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 11px 12px;
 
   color: #607b96;
 
