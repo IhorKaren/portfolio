@@ -58,8 +58,10 @@ export const Nav = styled.nav`
     width: 100%;
     top: 0;
     right: 0;
-    opacity: 1;
     display: flex;
+    opacity: 1;
+
+    pointer-events: all;
   }
 `;
 
