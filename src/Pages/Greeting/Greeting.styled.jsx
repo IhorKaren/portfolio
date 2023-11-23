@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Thumb = styled.div`
   position: relative;
-  z-index: 10;
+  z-index: 5;
   display: flex;
 
   flex-direction: column;
@@ -90,7 +90,7 @@ export const GreenStain = styled.div`
   position: absolute;
   left: 0;
   top: 15%;
-  z-index: 8;
+  z-index: 4;
   width: 255px;
   height: 277px;
 
@@ -112,7 +112,7 @@ export const BlueStain = styled.div`
   position: absolute;
   left: 50%;
   top: 30%;
-  z-index: 7;
+  z-index: 3;
   width: 255px;
   height: 277px;
 

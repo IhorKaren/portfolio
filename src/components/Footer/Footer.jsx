@@ -5,12 +5,18 @@ import {
   SocialListItem,
   SocialLink,
 } from './Footer.styled';
+import { useLocation } from 'react-router-dom';
 
 import { BsLinkedin, BsTelegram, BsGithub } from 'react-icons/bs';
 
 const Footer = () => {
+  const location = useLocation();
+  const checkLocation = location.pathname === '/greeting';
+
   return (
-    <PageFooter>
+    <PageFooter
+      style={{ backgroundColor: checkLocation ? 'transparent' : '#011627' }}
+    >
       <Hint>find me in:</Hint>
       <SocialsList>
         <SocialListItem>
