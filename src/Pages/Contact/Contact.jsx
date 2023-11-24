@@ -3,7 +3,6 @@ import Contacts from 'components/Contacts/Contacts';
 import FeedbackForm from 'components/FeedbackForm/FeedbackForm';
 import FormDecoration from 'components/FormDecoration/FormDecoration';
 import { PageWrap } from 'components/Container/Container.styled';
-import { PageContainer } from './Contact.styled';
 import { useState } from 'react';
 
 const Contact = () => {
