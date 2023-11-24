@@ -2,8 +2,10 @@ import {
   Decorate,
   DecorateList,
   DecorateItem,
+  DecorateText,
   DecorateNumber,
   DecorateMessage,
+  DecorateAreaMessage,
 } from './FormDecoration.styled';
 import { Violet, Orange, Gray } from 'components/App.styled';
 
@@ -15,75 +17,75 @@ const FormDecoration = ({ name, email, message }) => {
       <DecorateList>
         <DecorateItem>
           <DecorateNumber>1</DecorateNumber>
-          <pre>
+          <DecorateText>
             {' '}
             <Violet>const</Violet> button <Violet>=</Violet> document
             <Gray>.</Gray>querySelector<Gray>(</Gray>
             <Orange>'#sendBtn'</Orange>
             <Gray>);</Gray>
-          </pre>
+          </DecorateText>
         </DecorateItem>
         <DecorateItem>
           <DecorateNumber>2</DecorateNumber>
         </DecorateItem>
         <DecorateItem>
           <DecorateNumber>3</DecorateNumber>
-          <pre>
+          <DecorateText>
             <Violet> const</Violet> message <Violet>=</Violet>{' '}
             <Gray>&#123;</Gray>
-          </pre>
+          </DecorateText>
         </DecorateItem>
         <DecorateItem>
           <DecorateNumber>4</DecorateNumber>
-          <pre>  name: </pre>
+          <DecorateText> name: </DecorateText>
           <DecorateMessage>"{name}",</DecorateMessage>
         </DecorateItem>
         <DecorateItem>
           <DecorateNumber>5</DecorateNumber>
-          <pre>  email: </pre>
+          <DecorateText> email: </DecorateText>
           <DecorateMessage>"{email}",</DecorateMessage>
         </DecorateItem>
         <DecorateItem>
           <DecorateNumber>6</DecorateNumber>
-          <pre>  message: </pre>
-          <DecorateMessage>{'"' + message + '",'}</DecorateMessage>
+          <DecorateText> message: </DecorateText>
+          <DecorateAreaMessage>{'"' + message + '",'}</DecorateAreaMessage>
         </DecorateItem>
         <DecorateItem>
           <DecorateNumber>7</DecorateNumber>
-          <pre>  date: </pre>
+          <DecorateText> date: </DecorateText>
           <DecorateMessage>"{date.toDateString()}",</DecorateMessage>
         </DecorateItem>
         <DecorateItem>
           <DecorateNumber>8</DecorateNumber>
-          <pre>
+          <DecorateText>
             {' '}
             <Gray>&#125;</Gray>
-          </pre>
+          </DecorateText>
         </DecorateItem>
         <DecorateItem>
           <DecorateNumber>9</DecorateNumber>
         </DecorateItem>
         <DecorateItem>
           <DecorateNumber>10</DecorateNumber>
-          <pre>
+          <DecorateText>
             button.addEventListener<Gray>&#40;</Gray>
             <Orange>'click'</Orange>
             <Gray>, () </Gray>
-            <Violet>=&gt;</Violet> <Gray>&#123;</Gray>
-          </pre>
+            <Violet>=&gt; </Violet> <Gray>&#123;</Gray>
+          </DecorateText>
         </DecorateItem>
         <DecorateItem>
           <DecorateNumber>11</DecorateNumber>
-          <pre>
+          <DecorateText>
             {' '}
             form.send<Gray>(</Gray>message<Gray>);</Gray>
-          </pre>
+          </DecorateText>
         </DecorateItem>
         <DecorateItem>
           <DecorateNumber>12</DecorateNumber>
-          <pre>
+          <DecorateText>
             <Gray>&#125;&#41;</Gray>
-          </pre>
+          </DecorateText>
         </DecorateItem>
       </DecorateList>
     </Decorate>

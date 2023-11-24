@@ -15,8 +15,16 @@ export const StyledForm = styled.form`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 140px 15px 0 15px;
+  padding: 40px 15px 0 15px;
   gap: 24px;
+
+  border-top: 1px solid #1e2d3d;
+
+  @media screen and (min-width: 768px) {
+    padding: 140px 15px 0 15px;
+
+    border-top: none;
+  }
 `;
 
 export const InputWrap = styled.div`
@@ -25,7 +33,6 @@ export const InputWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 100vh;
   min-width: 140px;
   max-width: 372px;
 `;

@@ -11,16 +11,20 @@ export const PageAside = styled.aside`
     left: 0;
     display: flex;
     height: 100%;
-    width: 300px;
+    width: 260px;
 
     border-right: 1px solid #1e2d3d;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 300px;
   }
 `;
 
 export const AsideNav = styled.nav`
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     display: block;
     border-right: 1px solid #1e2d3d;
     background-color: #011627;

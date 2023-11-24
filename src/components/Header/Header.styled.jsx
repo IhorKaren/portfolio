@@ -15,15 +15,15 @@ export const PageHeader = styled.header`
     height: auto;
     justify-content: flex-start;
     padding: 0 0 0 21px;
-
     backdrop-filter: blur(60px);
   }
 `;
 
 export const Name = styled.p`
+  width: 238px;
   flex-shrink: 0;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     width: 278px;
   }
 `;

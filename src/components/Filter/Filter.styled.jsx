@@ -4,8 +4,15 @@ export const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  column-gap: 10px;
+  gap: 10px;
   padding: 10px 18px;
+  max-width: 500px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 14px;
+  }
 `;
 
 export const Label = styled.label`
@@ -27,6 +34,7 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
+  display: block;
   appearance: none;
 
   &:checked + ${Label} {
