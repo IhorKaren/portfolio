@@ -11,6 +11,7 @@ import {
   GreenStain,
   BlueStain,
 } from './Greeting.styled';
+import FloatingDust from 'components/FloatingDust/FloatingDust';
 
 const Greeting = () => {
   return (
@@ -49,6 +50,7 @@ const Greeting = () => {
         <GreenStain />
         <BlueStain />
       </Decoration>
+      <FloatingDust />
     </>
   );
 };
