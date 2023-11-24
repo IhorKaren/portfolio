@@ -2,21 +2,29 @@ import styled from '@emotion/styled';
 import { Link, NavLink } from 'react-router-dom';
 
 export const PageAside = styled.aside`
-  position: absolute;
-  left: 0;
-  display: flex;
-  height: 100%;
-  width: 300px;
-
-  border-right: 1px solid #1e2d3d;
   background-color: #011627;
 
   overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    left: 0;
+    display: flex;
+    height: 100%;
+    width: 300px;
+
+    border-right: 1px solid #1e2d3d;
+  }
 `;
 
 export const AsideNav = styled.nav`
-  border-right: 1px solid #1e2d3d;
-  background-color: #011627;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    border-right: 1px solid #1e2d3d;
+    background-color: #011627;
+  }
 `;
 
 export const AsideNavList = styled.ul`
@@ -52,11 +60,26 @@ export const ChildrenContainer = styled.div`
 `;
 
 export const SubHeader = styled.div`
-  width: 100%;
+  display: none;
 
-  padding-left: 300px;
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 100%;
 
-  border-bottom: 1px solid #1e2d3d;
+    padding-left: 300px;
+
+    border-bottom: 1px solid #1e2d3d;
+  }
+`;
+
+export const MobileSubHeader = styled.div`
+  padding: 21px 27px;
+
+  color: #fff;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Wrap = styled.div`

@@ -25,7 +25,7 @@ const About = () => {
       </Aside>
       <AboutWrap>
         <Outlet />
-        <Snippets />
+        {/* <Snippets /> */}
       </AboutWrap>
     </>
   );

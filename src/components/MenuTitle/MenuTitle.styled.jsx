@@ -4,7 +4,12 @@ export const TitleWrap = styled.div`
   width: 100%;
   padding: 10px 0 10px 14px;
 
-  border-bottom: 1px solid #1e2d3d;
+  background-color: #1e2d3d;
+
+  @media screen and (min-width: 768px) {
+    background-color: transparent;
+    border-bottom: 1px solid rgb(30, 45, 61);
+  }
 `;
 
 export const Title = styled.h3`

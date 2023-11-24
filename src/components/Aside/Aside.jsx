@@ -1,6 +1,7 @@
 import {
   PageAside,
   SubHeader,
+  MobileSubHeader,
   AsideNav,
   AsideNavList,
   AsideLink,
@@ -19,6 +20,9 @@ import {
 const Aside = ({ text, children }) => {
   return (
     <>
+      <MobileSubHeader>
+        <p>_{text}</p>
+      </MobileSubHeader>
       <PageAside>
         <AsideNav>
           <AsideNavList>

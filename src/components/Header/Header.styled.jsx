@@ -177,7 +177,6 @@ export const Backdrop = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 6;
-  pointer-events: all;
 
   &.hidden {
     display: none;

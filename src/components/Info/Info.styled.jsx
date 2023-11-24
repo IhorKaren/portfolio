@@ -6,7 +6,11 @@ export const InfoList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 10px 14px 32px 14px;
+  padding: 10px 14px;
+
+  @media screen and (min-width: 768px) {
+    padding: 10px 14px 32px 14px;
+  }
 `;
 
 export const Arrow = styled(BsChevronRight)`

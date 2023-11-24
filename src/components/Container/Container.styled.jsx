@@ -10,4 +10,8 @@ export const Container = styled.div`
   background-color: #011627;
 
   overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+   
+  }
 `;
