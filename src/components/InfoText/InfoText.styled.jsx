@@ -2,29 +2,33 @@ import styled from '@emotion/styled';
 
 export const PageWrap = styled.div`
   height: 100%;
-  padding-top: 20px;
+  border-top: 1px solid #1e2d3d;
 
   @media screen and (min-width: 768px) {
+    width: 100%;
     padding: 0 0 0 340px;
+
+    border-top: none;
   }
 `;
 
 export const TextList = styled.ul`
   position: relative;
   display: inline-flex;
-  width: 100%;
-  max-height: 380px;
-
   flex-direction: column;
-  gap: 8px;
+  width: 100%;
+  max-height: 440px;
+  padding: 10px 14px 140px 14px;
 
-  padding: 10px 14px 100px 14px;
+  gap: 8px;
 
   overflow-y: scroll;
 
   ::-webkit-scrollbar {
     background-color: #011627;
     width: 8px;
+
+    border-left: 1px solid #1e2d3d;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -34,8 +38,6 @@ export const TextList = styled.ul`
   @media screen and (min-width: 768px) {
     height: 100vh;
     max-height: 100%;
-    padding: 20px 20px 140px 0;
-
-    /* border-right: 1px solid #1e2d3d; */
+    padding: 20px 20px 240px 0;
   }
 `;
