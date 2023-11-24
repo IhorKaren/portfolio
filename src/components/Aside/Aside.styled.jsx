@@ -76,6 +76,7 @@ export const MobileSubHeader = styled.div`
   padding: 21px 27px;
 
   color: #fff;
+  font-size: 14px;
 
   @media screen and (min-width: 768px) {
     display: none;

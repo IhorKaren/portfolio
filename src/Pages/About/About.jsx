@@ -5,7 +5,7 @@ import Aside from 'components/Aside/Aside';
 import { Outlet } from 'react-router-dom';
 import Info from 'components/Info/Info';
 import Contacts from 'components/Contacts/Contacts';
-import Snippets from 'components/Snippets/Snippets';
+// import Snippets from 'components/Snippets/Snippets';
 
 const About = () => {
   const navigate = useNavigate();
