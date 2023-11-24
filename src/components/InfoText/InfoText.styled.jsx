@@ -1,17 +1,5 @@
 import styled from '@emotion/styled';
 
-export const PageWrap = styled.div`
-  height: 100%;
-  border-top: 1px solid #1e2d3d;
-
-  @media screen and (min-width: 768px) {
-    width: 100%;
-    padding: 0 0 0 340px;
-
-    border-top: none;
-  }
-`;
-
 export const TextList = styled.ul`
   position: relative;
   display: inline-flex;

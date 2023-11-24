@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { AboutWrap } from './About.styled';
 import Aside from 'components/Aside/Aside';
 import { Outlet } from 'react-router-dom';
 import Info from 'components/Info/Info';
@@ -19,14 +18,12 @@ const About = () => {
 
   return (
     <>
-      <Aside text="personal-info">
+      <Aside text="about-me">
         <Info />
         <Contacts isNeedBorder />
       </Aside>
-      <AboutWrap>
-        <Outlet />
-        {/* <Snippets /> */}
-      </AboutWrap>
+      <Outlet />
+      {/* <Snippets /> */}
     </>
   );
 };

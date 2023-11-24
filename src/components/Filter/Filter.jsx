@@ -23,7 +23,7 @@ const variants = [
 const Filter = () => {
   return (
     <>
-      <MenuTitle title="projects" />
+      <MenuTitle title="technologies" />
       <Form>
         {variants.map(el => {
           return (
