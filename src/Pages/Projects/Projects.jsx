@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
 import Aside from 'components/Aside/Aside';
 import Filter from 'components/Filter/Filter';
+import { PageContainer } from 'components/Container/Container.styled';
+import ProjectsList from 'components/ProjectsList/ProjectsList';
 import { getAllProjects } from 'services/projectsApi';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    async function getProjects() {
+    async function getProjectsList() {
       try {
         const response = await getAllProjects();
 
-        setProjects([...response]);
+        setProjects([...response].reverse());
 
         return;
       } catch (error) {
@@ -19,7 +21,7 @@ const Projects = () => {
       }
     }
 
-    getProjects();
+    getProjectsList();
   }, []);
 
   return (
@@ -27,10 +29,9 @@ const Projects = () => {
       <Aside text="projects">
         <Filter />
       </Aside>
-      {projects.length > 0 &&
-        projects.map(el => {
-          return <img key={el._id} src={el.preview} alt="" />;
-        })}
+      <PageContainer>
+        {projects.length > 0 && <ProjectsList array={projects} />}
+      </PageContainer>
     </>
   );
 };

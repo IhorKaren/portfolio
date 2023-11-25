@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Aside from 'components/Aside/Aside';
 import { Outlet } from 'react-router-dom';
+import { PageContainer } from 'components/Container/Container.styled';
 import Info from 'components/Info/Info';
 import Contacts from 'components/Contacts/Contacts';
 // import Snippets from 'components/Snippets/Snippets';
@@ -22,7 +23,9 @@ const About = () => {
         <Info />
         <Contacts isNeedBorder />
       </Aside>
-      <Outlet />
+      <PageContainer>
+        <Outlet />
+      </PageContainer>
       {/* <Snippets /> */}
     </>
   );

@@ -12,7 +12,6 @@ export const PageFooter = styled.footer`
   z-index: 3;
 
   border-top: 1px solid #1e2d3d;
-  backdrop-filter: blur(60px);
 
   @media screen and (min-width: 475px) {
     padding: 0 0 0 22px;

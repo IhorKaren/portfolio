@@ -12,12 +12,13 @@ export const Container = styled.div`
   overflow: hidden;
 `;
 
-export const PageWrap = styled.div`
+export const PageContainer = styled.div`
   height: 100%;
   border-top: 1px solid #1e2d3d;
 
   @media screen and (min-width: 768px) {
     display: flex;
+    align-items: flex-start;
     width: 100%;
     padding-left: 300px;
 

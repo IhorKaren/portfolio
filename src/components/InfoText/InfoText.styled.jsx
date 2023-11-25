@@ -24,8 +24,8 @@ export const TextList = styled.ul`
   }
 
   @media screen and (min-width: 768px) {
-    height: 100vh;
     max-height: 100%;
-    padding: 20px 20px 240px 0;
+
+    padding: 20px 20px 200px 0;
   }
 `;

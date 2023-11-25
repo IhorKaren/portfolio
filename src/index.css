@@ -24,15 +24,12 @@ body {
   line-height: normal;
   color: #607b96;
   background-color: #010c15;
-  /* background-color: #011627; */
 
   font-family: 'FiraCode', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  overflow: hidden;
 }
 
 code {
@@ -63,4 +60,10 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
