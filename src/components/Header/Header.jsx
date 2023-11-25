@@ -45,7 +45,7 @@ const Header = () => {
           </NavItem>
         </NavList>
       </Nav>
-      <MenuButton onClick={() => setMenuIsOpen(!menuIsOpen)}>
+      <MenuButton onClick={() => setMenuIsOpen(!menuIsOpen)} aria-label='mobile menu toggle'>
         {menuIsOpen ? <BsXLg size={24} /> : <BsTextRight size={28} />}
       </MenuButton>
     </PageHeader>

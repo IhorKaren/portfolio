@@ -44,7 +44,6 @@ const Footer = () => {
             href="https://github.com/IhorKaren"
             target="_blank"
             rel="noreferrer"
-            aria-label="github link"
           >
             @IhorKaren <BsGithub size={24} />
           </SocialLink>
