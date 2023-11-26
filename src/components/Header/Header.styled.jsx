@@ -59,6 +59,7 @@ export const Nav = styled.nav`
     top: 0;
     right: 0;
     display: flex;
+    padding-top: 0;
     opacity: 1;
     backdrop-filter: blur(0);
 

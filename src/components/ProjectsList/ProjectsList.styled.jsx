@@ -80,7 +80,6 @@ export const ProjectsItem = styled.li`
   flex-direction: column;
   width: 340px;
   height: 280px;
-  border-radius: 15px;
 
   border-radius: 15px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -103,11 +102,12 @@ export const Wrap = styled.div`
   height: 100%;
   align-items: flex-end;
   z-index: 1;
-  padding: 20px 30px;
+  padding: 20px 20px;
 
   background-color: #011627;
 
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
 `;
 
 export const TitleWrap = styled.div`
@@ -130,8 +130,8 @@ export const ProjectTitle = styled.h2`
 `;
 
 export const ProjectImage = styled.img`
-  border-radius: 15px 15px 0px 0px;
   z-index: 1;
+  border-radius: 14px 14px 0 0;
 `;
 
 export const IconsList = styled.ul`
