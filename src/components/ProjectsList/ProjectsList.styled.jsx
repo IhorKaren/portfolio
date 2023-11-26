@@ -1,50 +1,5 @@
 import styled from '@emotion/styled';
-import { css, keyframes } from '@emotion/react';
-
-const animateGlow = keyframes`
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-`;
-
-const textColor = keyframes`
-   0% {
-      color: #5565E8;
-    }
-    50% {
-      color: #0fffc1;
-    }
-    100% {
-      color: #5565E8;
-    }
-`;
-
-const borderColor = keyframes`
-   0% {
-      border-color: #5565E8;
-    }
-    50% {
-      border-color: #0fffc1;
-    }
-    100% {
-      border-color: #5565E8;
-    }
-`;
-
-const backlight = (x, y, spread, size, colorA, colorB, duration) => css`
-  position: absolute;
-  content: '';
-  bottom: ${x};
-  left: ${y};
-  right: 0;
-  height: 100%;
-  width: 100%;
-  transform: scale(${spread});
-  filter: blur(${size});
-  background: linear-gradient(270deg, ${colorA}, ${colorB});
-  background-size: 200% 200%;
-  animation: ${animateGlow} ${duration} ease infinite;
-`;
+import { textColor, borderColor, backlight } from 'components/App.styled';
 
 export const ProjectsStyledList = styled.ul`
   display: flex;
@@ -93,7 +48,7 @@ export const ProjectsItem = styled.li`
     }
 
     @media screen and (min-width: 1024px) {
-      ${backlight('-15%', 'center', '0.6', '5vw', '#0fffc1', '#7e0fff', '10s')}
+      ${backlight('-15%', '-10px', '0.6', '5vw', '#0fffc1', '#7e0fff', '10s')}
     }
   }
 `;

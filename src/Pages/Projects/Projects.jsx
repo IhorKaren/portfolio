@@ -7,6 +7,7 @@ import { getAllProjects } from 'services/projectsApi';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+  const [checkedCheckboxes, setCheckedCheckboxes] = useState([]);
 
   useEffect(() => {
     async function getProjectsList() {
@@ -24,13 +25,26 @@ const Projects = () => {
     getProjectsList();
   }, []);
 
+  const onFilterChange = e => {
+    const value = e.target.value;
+    const isChecked = e.target.checked;
+
+    if (isChecked) {
+      setCheckedCheckboxes(p => [...p, value]);
+    } else {
+      setCheckedCheckboxes(checkedCheckboxes.filter(el => el !== value));
+    }
+  };
+
   return (
     <>
       <Aside text="projects">
-        <Filter />
+        <Filter onChange={onFilterChange} />
       </Aside>
       <PageContainer>
-        {projects.length > 0 && <ProjectsList array={projects} />}
+        {projects.length > 0 && (
+          <ProjectsList array={projects} filter={checkedCheckboxes} />
+        )}
       </PageContainer>
     </>
   );

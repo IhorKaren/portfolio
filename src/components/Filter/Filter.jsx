@@ -20,7 +20,7 @@ const variants = [
   { id: 7, name: 'Node.js', icon: TbBrandNodejs },
 ];
 
-const Filter = () => {
+const Filter = ({ onChange }) => {
   return (
     <>
       <MenuTitle title="technologies" />
@@ -28,7 +28,12 @@ const Filter = () => {
         {variants.map(el => {
           return (
             <div key={el.id}>
-              <Input type="checkbox" value={el.name} id={el.name} />
+              <Input
+                type="checkbox"
+                value={el.name}
+                id={el.name}
+                onChange={onChange}
+              />
               <Label htmlFor={el.name} key={el.id}>
                 <el.icon size={24} />
                 {el.name}

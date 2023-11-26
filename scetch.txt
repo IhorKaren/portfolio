@@ -1,0 +1,44 @@
+ let newArray = [];
+
+    if (value && !isChecked && filteredArray.length > 0) {
+      setCheckedCheckboxes([...checkedCheckboxes.filter(el => el !== value)]);
+
+      // newArray = filteredArray.filter(el =>
+      //   checkedCheckboxes.every(tag => el.tags.includes(tag))
+      // );
+
+      console.log(
+        filteredArray.forEach(el =>
+          checkedCheckboxes.filter(tag => {
+            if (el.tags.includes(tag)) {
+              console.log(el);
+              return true;
+            } else {
+              return false;
+            }
+          })
+        )
+      );
+
+      return setFilteredArray(newArray);
+    }
+
+    if (value && isChecked && filteredArray.length > 0) {
+      newArray = projects.filter(el => el.tags.includes(value));
+
+      const uniqueObjects = Array.from(
+        new Map(
+          [...filteredArray, ...newArray].map(obj => [obj._id, obj])
+        ).values()
+      );
+
+      setCheckedCheckboxes(p => [...p, value]);
+      return setFilteredArray([...uniqueObjects]);
+    }
+
+    if (value && isChecked) {
+      newArray = [...projects.filter(el => el.tags.includes(value))];
+
+      setCheckedCheckboxes(p => [...p, value]);
+      return setFilteredArray([...newArray]);
+    }
