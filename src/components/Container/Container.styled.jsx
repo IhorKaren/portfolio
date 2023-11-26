@@ -26,6 +26,6 @@ export const PageContainer = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    padding-left: 340px;
+    margin-left: auto;
   }
 `;

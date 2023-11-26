@@ -13,7 +13,7 @@ const Projects = () => {
       try {
         const response = await getAllProjects();
 
-        setProjects([...response].reverse());
+        setProjects([...response]);
 
         return;
       } catch (error) {

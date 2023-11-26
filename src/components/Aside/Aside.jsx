@@ -12,8 +12,8 @@ import {
 import {
   BsXLg,
   BsTerminalFill,
-  BsWindowFullscreen,
-  BsPaletteFill,
+  BsEnvelopeFill,
+  BsEasel2Fill,
   BsPersonBoundingBox,
 } from 'react-icons/bs';
 
@@ -33,17 +33,17 @@ const Aside = ({ text, children }) => {
             </li>
             <li>
               <AsideLink to="/about">
-                <BsWindowFullscreen size={28} />
+                <BsPersonBoundingBox size={28} />
               </AsideLink>
             </li>
             <li>
               <AsideLink to="/projects">
-                <BsPaletteFill size={28} />
+                <BsEasel2Fill size={28} />
               </AsideLink>
             </li>
             <li>
               <AsideLink to="/contact">
-                <BsPersonBoundingBox size={28} />
+                <BsEnvelopeFill size={28} />
               </AsideLink>
             </li>
           </AsideNavList>

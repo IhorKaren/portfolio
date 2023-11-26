@@ -1,7 +1,7 @@
 import MenuTitle from 'components/MenuTitle/MenuTitle';
 import {
   TbBrandHtml5,
-  TbBrandCss3,
+  TbBrandSass,
   TbBrandJavascript,
   TbBrandTypescript,
   TbBrandReact,
@@ -12,7 +12,7 @@ import { Form, Label, Input } from './Filter.styled';
 
 const variants = [
   { id: 1, name: 'HTML', icon: TbBrandHtml5 },
-  { id: 2, name: 'CSS', icon: TbBrandCss3 },
+  { id: 2, name: 'SASS', icon: TbBrandSass },
   { id: 3, name: 'JavaScript', icon: TbBrandJavascript },
   { id: 4, name: 'TypeScript', icon: TbBrandTypescript },
   { id: 5, name: 'React', icon: TbBrandReact },

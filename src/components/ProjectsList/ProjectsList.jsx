@@ -5,6 +5,8 @@ import {
   Accent,
   ProjectTitle,
   ProjectImage,
+  Button,
+  Wrap,
 } from './ProjectsList.styled';
 
 const ProjectsList = ({ array }) => {
@@ -23,7 +25,10 @@ const ProjectsList = ({ array }) => {
                 <span>{'//'}</span> _{kebabTitleEdit(el.name)}
               </ProjectTitle>
             </TitleWrap>
-            <ProjectImage src={el.preview} alt="" />
+            <ProjectImage src={el.preview} width={358} alt="" />
+            <Wrap>
+              <Button type="button">project-info</Button>
+            </Wrap>
           </ProjectsItem>
         );
       })}
