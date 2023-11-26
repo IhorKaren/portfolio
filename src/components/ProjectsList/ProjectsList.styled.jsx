@@ -9,25 +9,25 @@ const animateGlow = keyframes`
 
 const textColor = keyframes`
    0% {
-      color: #7e0fff;
+      color: #5565E8;
     }
     50% {
       color: #0fffc1;
     }
     100% {
-      color: #7e0fff;
+      color: #5565E8;
     }
 `;
 
 const borderColor = keyframes`
    0% {
-      border-color: #7e0fff;
+      border-color: #5565E8;
     }
     50% {
       border-color: #0fffc1;
     }
     100% {
-      border-color: #7e0fff;
+      border-color: #5565E8;
     }
 `;
 
@@ -38,7 +38,7 @@ const backlight = (x, y, spread, size, colorA, colorB, duration) => css`
   left: ${y};
   right: 0;
   height: 100%;
-  width: 120%;
+  width: 100%;
   transform: scale(${spread});
   filter: blur(${size});
   background: linear-gradient(270deg, ${colorA}, ${colorB});
@@ -87,7 +87,15 @@ export const ProjectsItem = styled.li`
   border: 1px solid #1e2d3d;
 
   &::after {
-    ${backlight('-15%', '-15%', '0.6', '5vw', '#0fffc1', '#7e0fff', '10s')}
+    ${backlight('-13%', 'center', '0.7', '12vw', '#0fffc1', '#7e0fff', '10s')}
+
+    @media screen and (min-width: 768px) {
+      ${backlight('-13%', 'center', '0.7', '8vw', '#0fffc1', '#7e0fff', '10s')}
+    }
+
+    @media screen and (min-width: 1024px) {
+      ${backlight('-15%', 'center', '0.6', '5vw', '#0fffc1', '#7e0fff', '10s')}
+    }
   }
 `;
 export const Wrap = styled.div`
@@ -112,7 +120,6 @@ export const TitleWrap = styled.div`
 `;
 
 export const Accent = styled.span`
-  /* color: #5565e8; */
   animation: ${textColor} 10s ease infinite;
   font-weight: 700;
 `;
@@ -125,6 +132,25 @@ export const ProjectTitle = styled.h2`
 export const ProjectImage = styled.img`
   border-radius: 15px 15px 0px 0px;
   z-index: 2;
+`;
+
+export const IconsList = styled.ul`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+
+  color: #000;
+`;
+
+export const IconItem = styled.li`
+  display: flex;
+
+  border-radius: 4px;
+
+  overflow: hidden;
 `;
 
 export const Button = styled.button`

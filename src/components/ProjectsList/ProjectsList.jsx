@@ -5,9 +5,12 @@ import {
   Accent,
   ProjectTitle,
   ProjectImage,
+  IconsList,
+  IconItem,
   Button,
   Wrap,
 } from './ProjectsList.styled';
+import tagToIconConverter from 'services/tagToIconConverter';
 
 const ProjectsList = ({ array }) => {
   const kebabTitleEdit = title => {
@@ -26,6 +29,11 @@ const ProjectsList = ({ array }) => {
               </ProjectTitle>
             </TitleWrap>
             <ProjectImage src={el.preview} width={358} alt="" />
+            <IconsList>
+              {el.tags.map((el, i) => {
+                return <IconItem key={i}>{tagToIconConverter(el)}</IconItem>;
+              })}
+            </IconsList>
             <Wrap>
               <Button type="button">project-info</Button>
             </Wrap>

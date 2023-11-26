@@ -15,7 +15,6 @@ export const PageHeader = styled.header`
     height: auto;
     justify-content: flex-start;
     padding: 0 0 0 21px;
-    backdrop-filter: blur(60px);
   }
 `;
 
@@ -60,6 +59,7 @@ export const Nav = styled.nav`
     right: 0;
     display: flex;
     opacity: 1;
+    backdrop-filter: blur(0);
 
     pointer-events: all;
   }
