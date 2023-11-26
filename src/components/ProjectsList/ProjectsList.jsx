@@ -21,9 +21,7 @@ const ProjectsList = ({ array, filter }) => {
     <ProjectsStyledList>
       {array.map((el, i) => {
         const isItemShow =
-          filter.length === 0 ||
-          filter.includes(el.tags[0]) ||
-          filter.includes(el.tags[1]);
+          filter.length === 0 || filter.every(tag => el.tags.includes(tag));
 
         return (
           isItemShow && (
@@ -36,8 +34,10 @@ const ProjectsList = ({ array, filter }) => {
               </TitleWrap>
               <ProjectImage src={el.preview} width={358} alt="" />
               <IconsList>
-                {el.tags.map((el, i) => {
-                  return <IconItem key={i}>{tagToIconConverter(el)}</IconItem>;
+                {el.tags.map((el, index) => {
+                  return (
+                    <IconItem key={index}>{tagToIconConverter(el)}</IconItem>
+                  );
                 })}
               </IconsList>
               <Wrap>
