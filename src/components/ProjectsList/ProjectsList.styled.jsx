@@ -131,7 +131,7 @@ export const ProjectTitle = styled.h2`
 
 export const ProjectImage = styled.img`
   border-radius: 15px 15px 0px 0px;
-  z-index: 2;
+  z-index: 1;
 `;
 
 export const IconsList = styled.ul`

@@ -30,10 +30,11 @@ export const Name = styled.p`
 export const Nav = styled.nav`
   position: absolute;
   z-index: 6;
-  top: 56px;
+  top: 0;
   right: 0;
   width: 375px;
   height: 100%;
+  padding-top: 56px;
 
   opacity: 0;
   pointer-events: none;

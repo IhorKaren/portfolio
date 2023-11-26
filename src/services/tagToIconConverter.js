@@ -11,7 +11,6 @@ import {
 const tagToIconConverter = tag => {
   let icon = '';
   const iconSize = 24;
-  const borderRadius = '4px';
 
   switch (tag.toLowerCase()) {
     case 'html':
