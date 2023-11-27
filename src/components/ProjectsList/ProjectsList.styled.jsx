@@ -3,7 +3,6 @@ import {
   textColor,
   borderColor,
   backlight,
-  animateShadow,
 } from 'components/App.styled';
 
 export const ProjectsStyledList = styled.ul`

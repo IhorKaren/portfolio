@@ -1,5 +1,5 @@
 import styled from '@emotion/styled/macro';
-import { borderColor, backlight, animateShadow } from 'components/App.styled';
+import { borderColor, backlight } from 'components/App.styled';
 
 export const StyledForm = styled.form`
   display: flex;
