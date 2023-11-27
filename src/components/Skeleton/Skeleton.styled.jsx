@@ -1,12 +1,13 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
+import { backlight } from 'components/App.styled';
 
 const skeletonLoading = keyframes`
     0% {
-      background-color: rgb(156, 156, 156);
+      background-color: rgb(97, 97, 97);
     }
     100% {
-      background-color: rgb(92, 92, 92);
+      background-color: rgb(54, 54, 54);
     }
   `;
 
@@ -48,6 +49,48 @@ export const SkeletonCard = styled.div`
   border-radius: 15px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border: 1px solid #1e2d3d;
+
+  &::after {
+    ${backlight(
+      '-13%',
+      'center',
+      '100%',
+      '100%',
+      '0.7',
+      '12vw',
+      '#0fffc1',
+      '#7e0fff',
+      '10s'
+    )}
+
+    @media screen and (min-width: 768px) {
+      ${backlight(
+        '-13%',
+        'center',
+        '100%',
+        '100%',
+        '0.7',
+        '8vw',
+        '#0fffc1',
+        '#7e0fff',
+        '10s'
+      )}
+    }
+
+    @media screen and (min-width: 1024px) {
+      ${backlight(
+        '-15%',
+        '-10px',
+        '100%',
+        '100%',
+        '0.6',
+        '5vw',
+        '#0fffc1',
+        '#7e0fff',
+        '10s'
+      )}
+    }
+  }
 `;
 
 export const SkeletonTitleWrap = styled.div`
@@ -70,7 +113,7 @@ export const SkeletonTitle = styled.div`
 
 export const SkeletonImage = styled.div`
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   width: 338px;
   height: 129px;
   flex-shrink: 0;
@@ -82,9 +125,14 @@ export const SkeletonImage = styled.div`
 export const SkeletonWrap = styled.div`
   display: flex;
   height: 100%;
+  z-index: 1;
   align-items: flex-end;
 
   padding: 20px 20px;
+
+  background-color: #011627;
+
+  border-radius: 0 0 15px 15px;
 `;
 
 export const SkeletonButton = styled.div`

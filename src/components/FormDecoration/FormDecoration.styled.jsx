@@ -12,9 +12,13 @@ export const Decorate = styled.div`
 
     width: 100%;
     height: 100%;
-    padding: 140px 15px 0 15px;
+    padding: 180px 15px 0 15px;
 
     border-left: 1px solid #1e2d3d;
+  }
+
+  @media screen and (min-width: 1400px) {
+    padding: 140px 15px 0 15px;
   }
 `;
 
@@ -30,11 +34,12 @@ export const DecorateItem = styled.li`
 
   color: #5565e8;
 
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 16px;
 
   @media screen and (min-width: 1400px) {
     font-size: 18px;
+    line-height: 1.5;
   }
 `;
 

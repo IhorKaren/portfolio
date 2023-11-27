@@ -32,14 +32,30 @@ export const borderColor = keyframes`
     }
 `;
 
-export const backlight = (x, y, spread, size, colorA, colorB, duration) => css`
+export const animateShadow = keyframes`
+  0%{box-shadow: rgba(85, 101, 232, 0.4) -5px 5px, rgba(85, 101, 232, 0.3) -10px 10px, rgba(85, 101, 232, 0.2) -15px 15px, rgba(85, 101, 232, 0.1) -20px 20px, rgba(85, 101, 232, 0.05) -25px 25px;}
+  50%{box-shadow: rgba(15, 255, 193, 0.4) -5px 5px, rgba(15, 255, 193, 0.3) -10px 10px, rgba(15, 255, 193, 0.2) -15px 15px, rgba(15, 255, 193, 0.1) -20px 20px, rgba(15, 255, 193, 0.05) -25px 25px;}
+  100%{box-shadow: rgba(85, 101, 232, 0.4) -5px 5px, rgba(85, 101, 232, 0.3) -10px 10px, rgba(85, 101, 232, 0.2) -15px 15px, rgba(85, 101, 232, 0.1) -20px 20px, rgba(85, 101, 232, 0.05) -25px 25px;}
+`;
+
+export const backlight = (
+  x,
+  y,
+  width,
+  height,
+  spread,
+  size,
+  colorA,
+  colorB,
+  duration
+) => css`
   position: absolute;
   content: '';
   bottom: ${x};
   left: ${y};
   right: 0;
-  height: 100%;
-  width: 100%;
+  width: ${width};
+  height: ${height};
   transform: scale(${spread});
   filter: blur(${size});
   background: linear-gradient(270deg, ${colorA}, ${colorB});

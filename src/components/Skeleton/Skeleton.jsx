@@ -7,9 +7,9 @@ import {
   SkeletonImage,
   SkeletonWrap,
   SkeletonButton,
-} from './CardSkeleton.styled';
+} from './Skeleton.styled';
 
-const CardSkeleton = ({ quantity }) => {
+const Skeleton = ({ quantity }) => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
@@ -35,4 +35,4 @@ const CardSkeleton = ({ quantity }) => {
   );
 };
 
-export default CardSkeleton;
+export default Skeleton;

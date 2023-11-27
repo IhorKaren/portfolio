@@ -42,8 +42,8 @@ const FeedbackForm = ({
 
   return (
     <>
-      <StyledForm onSubmit={handleSubmit(onSubmit)}>
-        <InputWrap ref={parent}>
+      <StyledForm onSubmit={handleSubmit(onSubmit)} ref={parent}>
+        <InputWrap role="group">
           <StyledLabel htmlFor="name">_name:</StyledLabel>
           <StyledInput
             autoComplete="off"
@@ -54,9 +54,9 @@ const FeedbackForm = ({
             {...register('name')}
             onChange={onNameChange}
           />
-          {errors.name && <Error>{errors.name?.message}</Error>}
         </InputWrap>
-        <InputWrap ref={parent}>
+        {errors.name && <Error>{errors.name?.message}</Error>}
+        <InputWrap role="group">
           <StyledLabel htmlFor="email">_email:</StyledLabel>
           <StyledInput
             autoComplete="off"
@@ -67,9 +67,9 @@ const FeedbackForm = ({
             {...register('email')}
             onChange={onEmailChange}
           />
-          {errors.email && <Error>{errors.email?.message}</Error>}
         </InputWrap>
-        <InputWrap ref={parent}>
+        {errors.email && <Error>{errors.email?.message}</Error>}
+        <InputWrap role="group">
           <StyledLabel htmlFor="message">_message:</StyledLabel>
           <StyledTextArea
             autoComplete="off"
@@ -79,8 +79,8 @@ const FeedbackForm = ({
             {...register('message')}
             onChange={onMassegeChange}
           />
-          {errors.message && <Error>{errors.message?.message}</Error>}
         </InputWrap>
+        {errors.message && <Error>{errors.message?.message}</Error>}
         <SubmitButton type="submit">submit-message</SubmitButton>
       </StyledForm>
     </>

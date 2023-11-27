@@ -4,7 +4,7 @@ import Filter from 'components/Filter/Filter';
 import { PageContainer } from 'components/Container/Container.styled';
 import ProjectsList from 'components/ProjectsList/ProjectsList';
 import { getAllProjects } from 'services/projectsApi';
-import CardSkeleton from 'components/CardSkeleton/CardSkeleton';
+import Skeleton from 'components/Skeleton/Skeleton';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -47,7 +47,7 @@ const Projects = () => {
       </Aside>
       <PageContainer>
         {isLoading ? (
-          <CardSkeleton quantity={8} />
+          <Skeleton quantity={10} />
         ) : (
           <ProjectsList array={projects} filter={checkedCheckboxes} />
         )}

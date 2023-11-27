@@ -1,5 +1,10 @@
 import styled from '@emotion/styled';
-import { textColor, borderColor, backlight } from 'components/App.styled';
+import {
+  textColor,
+  borderColor,
+  backlight,
+  animateShadow,
+} from 'components/App.styled';
 
 export const ProjectsStyledList = styled.ul`
   display: flex;
@@ -41,14 +46,44 @@ export const ProjectsItem = styled.li`
   border: 1px solid #1e2d3d;
 
   &::after {
-    ${backlight('-13%', 'center', '0.7', '12vw', '#0fffc1', '#7e0fff', '10s')}
+    ${backlight(
+      '-13%',
+      'center',
+      '100%',
+      '100%',
+      '0.7',
+      '12vw',
+      '#0fffc1',
+      '#5565E8',
+      '10s'
+    )}
 
     @media screen and (min-width: 768px) {
-      ${backlight('-13%', 'center', '0.7', '8vw', '#0fffc1', '#7e0fff', '10s')}
+      ${backlight(
+        '-13%',
+        'center',
+        '100%',
+        '100%',
+        '0.7',
+        '8vw',
+        '#0fffc1',
+        '#5565E8',
+        '10s'
+      )}
     }
 
     @media screen and (min-width: 1024px) {
-      ${backlight('-15%', '-10px', '0.6', '5vw', '#0fffc1', '#7e0fff', '10s')}
+      ${backlight(
+        '-15%',
+        '-10px',
+        '100%',
+        '100%',
+        '0.6',
+        '5vw',
+        '#0fffc1',
+        '#5565E8',
+        '10s'
+      )}
     }
   }
 `;
@@ -114,8 +149,8 @@ export const Button = styled.button`
   border-radius: 8px;
   border: 1px solid transparent;
 
-  color: #fff;
-  background-color: #1c2b3a;
+  color: #607b96;
+  background-color: transparent;
 
   transition: background-color 200ms linear, color 200ms linear;
   animation: ${borderColor} 10s ease infinite;
@@ -123,7 +158,7 @@ export const Button = styled.button`
 
   &:hover,
   &:focus {
-    color: #607b96;
-    background-color: transparent;
+    color: #fff;
+    background-color: #1c2b3a;
   }
 `;

@@ -1,4 +1,5 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
+import { borderColor, backlight, animateShadow } from 'components/App.styled';
 
 export const StyledForm = styled.form`
   display: flex;
@@ -31,14 +32,35 @@ export const InputWrap = styled.div`
   @media screen and (min-width: 768px) {
     gap: 10px;
   }
+
+  & > label::after {
+    ${backlight(
+      '0',
+      '-40px',
+      '120%',
+      '15%',
+      '0.8',
+      '1vw',
+      '#0fffc1',
+      '#5565E8',
+      '10s'
+    )}
+  }
 `;
 
 export const StyledLabel = styled.label`
   display: inline-block;
   width: max-content;
+
+  transition: color 200ms linear;
+
+  ${InputWrap}:focus-within & {
+    color: #fff;
+  }
 `;
 
 export const StyledInput = styled.input`
+  z-index: 1;
   padding: 10px 15px;
 
   color: #465e77;
@@ -65,6 +87,7 @@ export const StyledInput = styled.input`
 `;
 
 export const StyledTextArea = styled.textarea`
+  z-index: 1;
   height: 125px;
   padding: 10px 15px;
 
@@ -116,8 +139,9 @@ export const SubmitButton = styled.button`
   justify-content: center;
   padding: 10px 14px;
 
-  color: #ffffff;
-  background-color: #1c2b3a;
+  color: #607b96;
+
+  background-color: transparent;
 
   border: 1px solid transparent;
   border-radius: 8px;
@@ -126,16 +150,22 @@ export const SubmitButton = styled.button`
 
   cursor: pointer;
 
-  transition: background-color 200ms linear, border-color 200ms linear;
+  transition: background-color 200ms linear, color 200ms linear;
+  animation: ${borderColor} 10s ease infinite;
 
   &:hover,
   &:focus {
-    background-color: transparent;
+    color: #ffffff;
+    background-color: #1c2b3a;
     border-color: #43d9ad;
   }
 `;
 
 export const Error = styled.div`
+  width: 100%;
+  max-width: 372px;
+
+  text-align: start;
   font-size: 12px;
   color: #fea55f;
 `;
