@@ -11,7 +11,7 @@ export const ProjectsStyledList = styled.ul`
   justify-content: center;
   padding: 60px 14px 360px 14px;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 
   ::-webkit-scrollbar {
     background-color: #011627;
