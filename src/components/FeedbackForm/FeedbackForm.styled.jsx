@@ -1,26 +1,18 @@
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/react';
-
-const appear = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
 
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   width: 100%;
-  padding: 20px 15px 0 15px;
-  gap: 24px;
+  height: 100%;
+  padding: 40px 15px 0 15px;
+  gap: 14px;
 
   @media screen and (min-width: 768px) {
     padding: 140px 15px 0 15px;
-
+    gap: 24px;
     border-top: none;
   }
 `;
@@ -67,7 +59,7 @@ export const StyledInput = styled.input`
 `;
 
 export const StyledTextArea = styled.textarea`
-  height: 145px;
+  height: 125px;
   padding: 10px 15px;
 
   color: #465e77;
@@ -106,6 +98,10 @@ export const StyledTextArea = styled.textarea`
   &:focus {
     border-color: #5565e8;
   }
+
+  @media screen and (min-width: 768px) {
+    height: 145px;
+  }
 `;
 
 export const SubmitButton = styled.button`
@@ -134,10 +130,6 @@ export const SubmitButton = styled.button`
 `;
 
 export const Error = styled.div`
-  position: absolute;
-  bottom: -18px;
-  left: 0;
   font-size: 12px;
   color: #fea55f;
-  animation: ${appear} 500ms ease-in-out;
 `;

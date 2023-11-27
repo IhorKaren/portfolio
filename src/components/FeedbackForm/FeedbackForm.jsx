@@ -11,6 +11,7 @@ import {
   SubmitButton,
   Error,
 } from './FeedbackForm.styled';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 
 const schema = Yup.object().shape({
   name: Yup.string().required('name is required!').min(2),
@@ -18,7 +19,14 @@ const schema = Yup.object().shape({
   message: Yup.string().required('message is required!').min(10),
 });
 
-const FeedbackForm = ({ sendFeedback,onNameChange,onEmailChange, onMassegeChange }) => {
+const FeedbackForm = ({
+  sendFeedback,
+  onNameChange,
+  onEmailChange,
+  onMassegeChange,
+}) => {
+  const [parent] = useAutoAnimate();
+
   const {
     register,
     handleSubmit,
@@ -35,7 +43,7 @@ const FeedbackForm = ({ sendFeedback,onNameChange,onEmailChange, onMassegeChange
   return (
     <>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
-        <InputWrap>
+        <InputWrap ref={parent}>
           <StyledLabel htmlFor="name">_name:</StyledLabel>
           <StyledInput
             autoComplete="off"
@@ -48,7 +56,7 @@ const FeedbackForm = ({ sendFeedback,onNameChange,onEmailChange, onMassegeChange
           />
           {errors.name && <Error>{errors.name?.message}</Error>}
         </InputWrap>
-        <InputWrap>
+        <InputWrap ref={parent}>
           <StyledLabel htmlFor="email">_email:</StyledLabel>
           <StyledInput
             autoComplete="off"
@@ -61,7 +69,7 @@ const FeedbackForm = ({ sendFeedback,onNameChange,onEmailChange, onMassegeChange
           />
           {errors.email && <Error>{errors.email?.message}</Error>}
         </InputWrap>
-        <InputWrap>
+        <InputWrap ref={parent}>
           <StyledLabel htmlFor="message">_message:</StyledLabel>
           <StyledTextArea
             autoComplete="off"

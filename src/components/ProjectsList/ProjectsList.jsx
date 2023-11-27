@@ -11,14 +11,17 @@ import {
   Wrap,
 } from './ProjectsList.styled';
 import tagToIconConverter from 'services/tagToIconConverter';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 
 const ProjectsList = ({ array, filter }) => {
+  const [parent] = useAutoAnimate();
+
   const kebabTitleEdit = title => {
     return title.toLowerCase().split(' ').join('-');
   };
 
   return (
-    <ProjectsStyledList>
+    <ProjectsStyledList ref={parent}>
       {array.map((el, i) => {
         const isItemShow =
           filter.length === 0 || filter.every(tag => el.tags.includes(tag));
