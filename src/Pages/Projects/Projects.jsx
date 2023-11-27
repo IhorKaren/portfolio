@@ -4,9 +4,11 @@ import Filter from 'components/Filter/Filter';
 import { PageContainer } from 'components/Container/Container.styled';
 import ProjectsList from 'components/ProjectsList/ProjectsList';
 import { getAllProjects } from 'services/projectsApi';
+import CardSkeleton from 'components/CardSkeleton/CardSkeleton';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [checkedCheckboxes, setCheckedCheckboxes] = useState([]);
 
   useEffect(() => {
@@ -19,6 +21,8 @@ const Projects = () => {
         return;
       } catch (error) {
         console.log(error);
+      } finally {
+        setIsLoading(false);
       }
     }
 
@@ -42,7 +46,9 @@ const Projects = () => {
         <Filter onChange={onFilterChange} />
       </Aside>
       <PageContainer>
-        {projects.length > 0 && (
+        {isLoading ? (
+          <CardSkeleton quantity={8} />
+        ) : (
           <ProjectsList array={projects} filter={checkedCheckboxes} />
         )}
       </PageContainer>
@@ -51,3 +57,8 @@ const Projects = () => {
 };
 
 export default Projects;
+
+// {projects.length > 0 && (
+//   <ProjectsList array={projects} filter={checkedCheckboxes} />
+// )}
+// <CardSkeleton quantity={8} />

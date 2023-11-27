@@ -4,7 +4,6 @@ import {
   TitleWrap,
   Accent,
   ProjectTitle,
-  ProjectImage,
   IconsList,
   IconItem,
   Button,
@@ -12,6 +11,7 @@ import {
 } from './ProjectsList.styled';
 import tagToIconConverter from 'services/tagToIconConverter';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
+import LazyImage from 'components/LazyImage/LazyImage';
 
 const ProjectsList = ({ array, filter }) => {
   const [parent] = useAutoAnimate();
@@ -35,7 +35,12 @@ const ProjectsList = ({ array, filter }) => {
                   <span>{'//'}</span> _{kebabTitleEdit(el.name)}
                 </ProjectTitle>
               </TitleWrap>
-              <ProjectImage src={el.preview} width={358} alt="" />
+              <LazyImage
+                src={el.preview}
+                width={338}
+                height={129}
+                alt={el.name}
+              />
               <IconsList>
                 {el.tags.map((el, index) => {
                   return (
