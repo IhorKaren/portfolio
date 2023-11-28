@@ -10,7 +10,7 @@ const float = keyframes`
  `;
 
 export const Scene = styled.ul`
-  z-index: 4;
+  display: none;
 
   & .img {
     position: absolute;
@@ -46,5 +46,10 @@ export const Scene = styled.ul`
     background-repeat: repeat;
     animation-duration: 150s;
     filter: brightness(5);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    z-index: 4;
   }
 `;
