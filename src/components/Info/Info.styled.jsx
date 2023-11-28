@@ -1,6 +1,7 @@
-import styled from '@emotion/styled/macro';
+import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { BsChevronRight } from 'react-icons/bs';
+import { vars } from 'components/App.styled';
 
 export const InfoList = styled.ul`
   display: flex;
@@ -15,10 +16,10 @@ export const InfoList = styled.ul`
 
 export const Arrow = styled(BsChevronRight)`
   stroke-width: 2px;
-  color: #607b96;
+  color: ${vars.primaryTextColor};
 
   transform: rotate(0);
-  transition: transform 200ms linear;
+  transition: transform ${vars.timingFunction};
 `;
 
 export const InfoLink = styled(NavLink)`
@@ -26,13 +27,13 @@ export const InfoLink = styled(NavLink)`
   align-items: center;
   gap: 10px;
 
-  color: #607b96;
+  color: ${vars.primaryTextColor};
   text-decoration: none;
 
-  transition: color 200ms linear;
+  transition: color ${vars.timingFunction};
 
   &.active {
-    color: #fff;
+    color: ${vars.primaryWhiteColor};
   }
 
   &.active ${Arrow} {
@@ -41,6 +42,6 @@ export const InfoLink = styled(NavLink)`
 
   &:hover,
   &:focus {
-    color: #fff;
+    color: ${vars.primaryWhiteColor};
   }
 `;

@@ -1,4 +1,5 @@
-import styled from '@emotion/styled/macro';
+import styled from 'styled-components';
+import { vars } from 'components/App.styled';
 
 export const Form = styled.form`
   display: flex;
@@ -20,16 +21,16 @@ export const Label = styled.label`
   width: 100%;
   gap: 5px;
 
-  transition: color 200ms linear;
+  transition: color ${vars.timingFunction};
 
   & > svg {
-    transition: color 200ms linear;
-    color: #607b96;
+    transition: color ${vars.timingFunction};
+    color: ${vars.accentGray};
   }
 
   &:hover,
   &:focus {
-    color: #fff;
+    color: ${vars.primaryWhiteColor};
   }
 `;
 
@@ -38,10 +39,10 @@ export const Input = styled.input`
   appearance: none;
 
   &:checked + ${Label} {
-    color: #fff;
+    color: ${vars.primaryWhiteColor};
 
     > svg {
-      color: #fff;
+      color: ${vars.primaryWhiteColor};
     }
   }
 `;

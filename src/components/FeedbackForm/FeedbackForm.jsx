@@ -9,6 +9,7 @@ import {
   StyledInput,
   StyledTextArea,
   SubmitButton,
+  AnimatedErrorBox,
   Error,
 } from './FeedbackForm.styled';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
@@ -42,45 +43,51 @@ const FeedbackForm = ({
 
   return (
     <>
-      <StyledForm onSubmit={handleSubmit(onSubmit)} ref={parent}>
-        <InputWrap role="group">
-          <StyledLabel htmlFor="name">_name:</StyledLabel>
-          <StyledInput
-            autoComplete="off"
-            maxLength={30}
-            type="text"
-            id="name"
-            placeholder="Name"
-            {...register('name')}
-            onChange={onNameChange}
-          />
-        </InputWrap>
-        {errors.name && <Error>{errors.name?.message}</Error>}
-        <InputWrap role="group">
-          <StyledLabel htmlFor="email">_email:</StyledLabel>
-          <StyledInput
-            autoComplete="off"
-            maxLength={30}
-            type="email"
-            id="email"
-            placeholder="example@mail.com"
-            {...register('email')}
-            onChange={onEmailChange}
-          />
-        </InputWrap>
-        {errors.email && <Error>{errors.email?.message}</Error>}
-        <InputWrap role="group">
-          <StyledLabel htmlFor="message">_message:</StyledLabel>
-          <StyledTextArea
-            autoComplete="off"
-            type="text"
-            id="message"
-            placeholder="Your message..."
-            {...register('message')}
-            onChange={onMassegeChange}
-          />
-        </InputWrap>
-        {errors.message && <Error>{errors.message?.message}</Error>}
+      <StyledForm onSubmit={handleSubmit(onSubmit)}>
+        <AnimatedErrorBox ref={parent}>
+          <InputWrap role="group">
+            <StyledLabel htmlFor="name">_name:</StyledLabel>
+            <StyledInput
+              autoComplete="off"
+              maxLength={30}
+              type="text"
+              id="name"
+              placeholder="Name"
+              {...register('name')}
+              onChange={onNameChange}
+            />
+          </InputWrap>
+          {errors.name && <Error>{errors.name?.message}</Error>}
+        </AnimatedErrorBox>
+        <AnimatedErrorBox ref={parent}>
+          <InputWrap role="group">
+            <StyledLabel htmlFor="email">_email:</StyledLabel>
+            <StyledInput
+              autoComplete="off"
+              maxLength={30}
+              type="email"
+              id="email"
+              placeholder="example@mail.com"
+              {...register('email')}
+              onChange={onEmailChange}
+            />
+          </InputWrap>
+          {errors.email && <Error>{errors.email?.message}</Error>}
+        </AnimatedErrorBox>
+        <AnimatedErrorBox ref={parent}>
+          <InputWrap role="group">
+            <StyledLabel htmlFor="message">_message:</StyledLabel>
+            <StyledTextArea
+              autoComplete="off"
+              type="text"
+              id="message"
+              placeholder="Your message..."
+              {...register('message')}
+              onChange={onMassegeChange}
+            />
+          </InputWrap>
+          {errors.message && <Error>{errors.message?.message}</Error>}
+        </AnimatedErrorBox>
         <SubmitButton type="submit">submit-message</SubmitButton>
       </StyledForm>
     </>

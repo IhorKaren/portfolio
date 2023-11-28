@@ -30,6 +30,18 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  ::-webkit-scrollbar {
+    background-color: #011627;
+    width: 8px;
+    height: 6px;
+
+    border-left: 1px solid #1e2d3d;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #607b96;
+  }
 }
 
 code {

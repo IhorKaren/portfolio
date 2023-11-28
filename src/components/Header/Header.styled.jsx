@@ -1,5 +1,6 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { vars } from 'components/App.styled';
 
 export const PageHeader = styled.header`
   width: 100%;
@@ -9,7 +10,7 @@ export const PageHeader = styled.header`
   align-items: center;
 
   padding: 0 21px 0 21px;
-  border-bottom: 1px solid #1e2d3d;
+  border-bottom: ${vars.darkBorder};
 
   @media screen and (min-width: 1024px) {
     height: auto;
@@ -79,17 +80,17 @@ export const NavItem = styled.li`
 
   text-align: center;
 
-  border-bottom: 1px solid #4d5bce;
+  border-bottom: 1px solid ${vars.accentBlue};
 
   @media screen and (min-width: 1024px) {
     border-bottom: none;
-    border-right: 1px solid #1e2d3d;
+    border-right: ${vars.darkBorder};
 
     text-align: start;
 
     &:first-of-type,
     &:last-of-type {
-      border-left: 1px solid #1e2d3d;
+      border-left: ${vars.darkBorder};
     }
 
     &:last-of-type {
@@ -106,7 +107,7 @@ export const Link = styled(NavLink)`
   color: #607b96;
   text-decoration: none;
 
-  transition: color 200ms linear;
+  transition: color ${vars.timingFunction};
 
   &::before {
     content: '';
@@ -116,14 +117,15 @@ export const Link = styled(NavLink)`
     left: 0;
     width: 100%;
 
-    border-bottom: 1px solid #43d9ad;
+    border-bottom: 1px solid ${vars.accentGreen};
 
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 200ms linear, border-bottom 200ms linear;
+    transition: transform ${vars.timingFunction},
+      border-bottom ${vars.timingFunction};
 
     @media screen and (min-width: 1024px) {
-      border-bottom: 2px solid #5565e8;
+      border-bottom: 2px solid ${vars.accentBlue};
 
       transform-origin: center;
     }
@@ -131,7 +133,7 @@ export const Link = styled(NavLink)`
 
   &:hover,
   &:focus {
-    color: #fff;
+    color: ${vars.primaryWhiteColor};
   }
 
   &:hover::before,
@@ -140,17 +142,17 @@ export const Link = styled(NavLink)`
   }
 
   &.active {
-    color: #fff;
+    color: ${vars.primaryWhiteColor};
 
     border-bottom: none;
 
-    ::before {
-      border-bottom: 1px solid #43d9ad;
+    &::before {
+      border-bottom: 1px solid ${vars.accentGreen};
 
       transform: scaleX(1);
 
       @media screen and (min-width: 1024px) {
-        border-bottom: 2px solid #43d9ad;
+        border-bottom: 2px solid ${vars.accentGreen};
       }
     }
   }

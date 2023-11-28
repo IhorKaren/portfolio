@@ -47,7 +47,7 @@ const Projects = () => {
       </Aside>
       <PageContainer>
         {isLoading ? (
-          <Skeleton quantity={10} />
+          <Skeleton quantity={12} />
         ) : (
           <ProjectsList array={projects} filter={checkedCheckboxes} />
         )}
@@ -57,8 +57,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-// {projects.length > 0 && (
-//   <ProjectsList array={projects} filter={checkedCheckboxes} />
-// )}
-// <CardSkeleton quantity={8} />

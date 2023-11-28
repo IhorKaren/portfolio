@@ -1,4 +1,5 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
+import { vars } from 'components/App.styled';
 
 export const Thumb = styled.div`
   position: relative;
@@ -35,7 +36,7 @@ export const MainTitle = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  color: #4d5bce;
+  color: ${vars.accentBlue};
   font-size: 28px;
   font-weight: 400;
 
@@ -60,23 +61,11 @@ export const LinkThumb = styled.div`
 export const Link = styled.a`
   text-decoration: none;
 
-  color: #e99287;
+  color: ${vars.accentOrange};
 
-  transition: color 200ms linear;
+  transition: color ${vars.timingFunction};
 
   &:hover {
-    color: #ffffff;
-  }
-`;
-
-export const AccentColor = styled.span`
-  color: #43d9ad;
-
-  &:first-of-type {
-    color: #4d5bce;
-  }
-
-  &:last-of-type {
     color: #ffffff;
   }
 `;
@@ -96,7 +85,7 @@ export const GreenStain = styled.div`
 
   transform: rotate(-94.305deg);
   border-radius: 100% 20%;
-  background: #43d9ad;
+  background: ${vars.accentGreen};
   opacity: 0.4;
   filter: blur(87px);
 
@@ -118,7 +107,7 @@ export const BlueStain = styled.div`
 
   transform: rotate(13.508deg);
 
-  background: #4d5bce;
+  background: ${vars.accentBlue};
   opacity: 0.4;
   filter: blur(87px);
 

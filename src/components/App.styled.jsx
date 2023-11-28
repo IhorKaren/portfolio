@@ -1,6 +1,23 @@
-import styled from '@emotion/styled';
+import styled, { css, keyframes } from 'styled-components';
 
-import { css, keyframes } from '@emotion/react';
+export const vars = {
+  fontFamily: 'FiraCode',
+  primaryTextColor: '#607b96',
+  secondaryTextcolor: '#465e77',
+  primaryWhiteColor: '#ffffff',
+  primaryBgColor: '#011627',
+  secondaryBgColor: '#011221',
+  timingFunction: '200ms linear',
+  keyframeFunction: '10s ease infinite',
+  darkBorder: '1px solid #1e2d3d',
+  accentBlue: '#5565E8',
+  accentGreen: '#0fffc1',
+  accentOrange: '#FEA55F',
+  accentViolet: '#c98bdf',
+  accentGray: '#607b96',
+  accentBlueRGB: '85, 101, 232,',
+  accentGreenRGB: '15, 255, 193,',
+};
 
 const animateGlow = keyframes`
   0%{background-position:0% 50%}
@@ -10,32 +27,32 @@ const animateGlow = keyframes`
 
 export const textColor = keyframes`
    0% {
-      color: #5565E8;
+      color: ${vars.accentBlue};
     }
     50% {
-      color: #0fffc1;
+      color: ${vars.Green};
     }
     100% {
-      color: #5565E8;
+      color: ${vars.accentBlue};
     }
 `;
 
 export const borderColor = keyframes`
    0% {
-      border-color: #5565E8;
+      border-color: ${vars.accentBlue};
     }
     50% {
-      border-color: #0fffc1;
+      border-color: ${vars.Green};
     }
     100% {
-      border-color: #5565E8;
+      border-color: ${vars.accentBlue};
     }
 `;
 
 export const animateShadow = keyframes`
-  0%{box-shadow: rgba(85, 101, 232, 0.4) -5px 5px, rgba(85, 101, 232, 0.3) -10px 10px, rgba(85, 101, 232, 0.2) -15px 15px, rgba(85, 101, 232, 0.1) -20px 20px, rgba(85, 101, 232, 0.05) -25px 25px;}
-  50%{box-shadow: rgba(15, 255, 193, 0.4) -5px 5px, rgba(15, 255, 193, 0.3) -10px 10px, rgba(15, 255, 193, 0.2) -15px 15px, rgba(15, 255, 193, 0.1) -20px 20px, rgba(15, 255, 193, 0.05) -25px 25px;}
-  100%{box-shadow: rgba(85, 101, 232, 0.4) -5px 5px, rgba(85, 101, 232, 0.3) -10px 10px, rgba(85, 101, 232, 0.2) -15px 15px, rgba(85, 101, 232, 0.1) -20px 20px, rgba(85, 101, 232, 0.05) -25px 25px;}
+  0%{box-shadow: rgba(${vars.accentBlueRGB} 0.4) 0 12px 17px 0;}
+  50%{box-shadow: rgba(${vars.accentGreenRGB} 0.4) 0 12px 17px 0;}
+  100%{box-shadow: rgba(${vars.accentBlueRGB} 0.4) 0 12px 17px 0;}
 `;
 
 export const backlight = (
@@ -64,20 +81,20 @@ export const backlight = (
 `;
 
 export const Green = styled.span`
-  color: #43d9ad;
+  color: ${vars.accentGreen};
 `;
 
 export const Blue = styled.span`
-  color: #5565e8;
+  color: ${vars.accentBlue};
 `;
 export const Orange = styled.span`
-  color: #fea55f;
+  color: ${vars.accentOrange};
 `;
 
 export const Violet = styled.span`
-  color: #c98bdf;
+  color: ${vars.accentViolet};
 `;
 
 export const Gray = styled.span`
-  color: #607b96;
+  color: ${vars.accentGray};
 `;

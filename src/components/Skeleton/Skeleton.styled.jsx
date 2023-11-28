@@ -1,6 +1,5 @@
-import styled from '@emotion/styled';
-import { keyframes } from '@emotion/react';
-import { backlight } from 'components/App.styled';
+import styled, { keyframes } from 'styled-components';
+import { vars, backlight } from 'components/App.styled';
 
 const skeletonLoading = keyframes`
     0% {
@@ -23,17 +22,6 @@ export const SkeletonList = styled.div`
 
   overflow-y: auto;
 
-  ::-webkit-scrollbar {
-    background-color: #011627;
-    width: 8px;
-
-    border-left: 1px solid #1e2d3d;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: #607b96;
-  }
-
   @media screen and (min-width: 768px) {
     padding: 80px 30px 200px 30px;
   }
@@ -48,7 +36,7 @@ export const SkeletonCard = styled.div`
 
   border-radius: 15px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  border: 1px solid #1e2d3d;
+  border: ${vars.darkBorder};
 
   &::after {
     ${backlight(
@@ -130,7 +118,7 @@ export const SkeletonWrap = styled.div`
 
   padding: 20px 20px;
 
-  background-color: #011627;
+  background-color: ${vars.primaryBgColor};
 
   border-radius: 0 0 15px 15px;
 `;

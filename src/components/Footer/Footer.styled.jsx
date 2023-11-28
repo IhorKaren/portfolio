@@ -1,4 +1,5 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
+import { vars } from 'components/App.styled';
 
 export const PageFooter = styled.footer`
   position: absolute;
@@ -11,7 +12,7 @@ export const PageFooter = styled.footer`
   padding: 0;
   z-index: 3;
 
-  border-top: 1px solid #1e2d3d;
+  border-top: ${vars.darkBorder};
 
   @media screen and (min-width: 475px) {
     padding: 0 0 0 22px;
@@ -33,10 +34,10 @@ export const SocialsList = styled.ul`
 `;
 
 export const SocialListItem = styled.li`
-  border-right: 1px solid #1e2d3d;
+  border-right: ${vars.darkBorder};
 
   &:last-of-type {
-    border-left: 1px solid #1e2d3d;
+    border-left: ${vars.darkBorder};
   }
 
   &:last-of-type {
@@ -46,7 +47,7 @@ export const SocialListItem = styled.li`
 
   @media screen and (min-width: 475px) {
     &:first-of-type {
-      border-left: 1px solid #1e2d3d;
+      border-left: ${vars.darkBorder};
     }
   }
 `;
@@ -57,13 +58,13 @@ export const SocialLink = styled.a`
   gap: 5px;
   padding: 11px 14px;
 
-  color: #607b96;
+  color: ${vars.primaryTextColor};
 
   text-decoration: none;
 
-  transition: color 200ms linear;
+  transition: ${vars.timingFunction};
 
   &:hover {
-    color: #ffffff;
+    color: ${vars.primaryWhiteColor};
   }
 `;

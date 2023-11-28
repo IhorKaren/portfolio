@@ -1,5 +1,5 @@
-import styled from '@emotion/styled/macro';
-import { borderColor, backlight } from 'components/App.styled';
+import styled from 'styled-components';
+import { vars, borderColor, animateShadow } from 'components/App.styled';
 
 export const StyledForm = styled.form`
   display: flex;
@@ -9,13 +9,13 @@ export const StyledForm = styled.form`
   width: 100%;
   height: 100%;
   padding: 40px 15px 320px 15px;
-  gap: 14px;
+  gap: 28px;
 
-  overflow-y: auto;
+  overflow-y: scroll;
 
   @media screen and (min-width: 768px) {
-    padding: 140px 15px 180px 15px;
-    gap: 24px;
+    padding: 150px 15px 160px 15px;
+    gap: 48px;
     border-top: none;
   }
 `;
@@ -28,104 +28,84 @@ export const InputWrap = styled.div`
   gap: 6px;
   min-width: 140px;
   max-width: 372px;
-
-  @media screen and (min-width: 768px) {
-    gap: 10px;
-  }
-
-  & > label::after {
-    ${backlight(
-      '0',
-      '-40px',
-      '120%',
-      '15%',
-      '0.8',
-      '1vw',
-      '#0fffc1',
-      '#5565E8',
-      '10s'
-    )}
-  }
 `;
 
 export const StyledLabel = styled.label`
+  position: absolute;
+  top: -30px;
   display: inline-block;
   width: max-content;
 
-  transition: color 200ms linear;
+  transition: color ${vars.timingFunction};
 
-  ${InputWrap}:focus-within & {
-    color: #fff;
+  &:hover {
+    color: ${vars.primaryWhiteColor};
+
+    + input {
+      border-color: ${vars.primaryWhiteColor};
+    }
   }
+
+  ${InputWrap}:focus-within &, ${InputWrap}:hover & {
+    color: ${vars.primaryWhiteColor};
+  }
+
+  cursor: pointer;
 `;
 
 export const StyledInput = styled.input`
-  z-index: 1;
   padding: 10px 15px;
-
-  color: #465e77;
-  background-color: #011221;
-
   border-radius: 8px;
-  border: 1px solid #1e2d3d;
+  border: ${vars.darkBorder};
   outline: none;
 
-  font-family: 'FiraCode';
+  color: ${vars.secondaryTextcolor};
+  background-color: ${vars.secondaryBgColor};
+
+  font-family: ${vars.fontFamily};
   font-size: 16px;
   font-style: normal;
   font-weight: 450;
 
-  transition: border-color 200ms linear;
+  transition: border-color ${vars.timingFunction};
+  animation: ${animateShadow} 10s ease infinite;
 
-  &:hover {
-    border-color: #43d9ad;
-  }
-
-  &:focus {
-    border-color: #5565e8;
+  ${InputWrap}:focus-within &, ${InputWrap}:hover & {
+    border-color: ${vars.primaryWhiteColor};
   }
 `;
 
 export const StyledTextArea = styled.textarea`
-  z-index: 1;
   height: 125px;
   padding: 10px 15px;
-
-  color: #465e77;
-  background-color: #011221;
-
-  border-radius: 8px;
-  border: 1px solid #1e2d3d;
-
   outline: none;
   resize: none;
 
-  font-family: 'FiraCode';
+  color: ${vars.secondaryTextcolor};
+  background-color: ${vars.secondaryBgColor};
+
+  border-radius: 8px;
+  border: ${vars.darkBorder};
+
+  font-family: ${vars.fontFamily};
   font-size: 16px;
   font-style: normal;
   font-weight: 450;
 
-  ::-webkit-scrollbar {
-    width: 8px;
+  transition: border-color ${vars.timingFunction};
+  animation: ${animateShadow} ${vars.keyframeFunction};
 
-    background-color: #011627;
-    border: 1px solid #1e2d3d;
-    border-radius: 12px;
+  ::-webkit-scrollbar {
+    border: ${vars.darkBorder};
+    border-radius: 50px;
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 12px;
-    background-color: #607b96;
+    border-radius: 50px;
   }
 
-  transition: border-color 200ms linear;
-
-  &:hover {
-    border-color: #43d9ad;
-  }
-
-  &:focus {
-    border-color: #5565e8;
+  ${InputWrap}:focus-within &, ${InputWrap}:hover & {
+    border-color: ${vars.primaryWhiteColor};
   }
 
   @media screen and (min-width: 768px) {
@@ -139,26 +119,35 @@ export const SubmitButton = styled.button`
   justify-content: center;
   padding: 10px 14px;
 
-  color: #607b96;
+  color: ${vars.primaryTextColor};
 
   background-color: transparent;
 
   border: 1px solid transparent;
   border-radius: 8px;
 
-  font-family: 'FiraCode';
+  font-family: ${vars.fontFamily};
 
   cursor: pointer;
 
-  transition: background-color 200ms linear, color 200ms linear;
-  animation: ${borderColor} 10s ease infinite;
+  transition: background-color ${vars.timingFunction},
+    color ${vars.timingFunction};
+  animation: ${borderColor} ${vars.keyframeFunction};
 
   &:hover,
   &:focus {
-    color: #ffffff;
-    background-color: #1c2b3a;
-    border-color: #43d9ad;
+    color: ${vars.primaryWhiteColor};
+    background-color: ${vars.primaryBgColor};
   }
+`;
+
+export const AnimatedErrorBox = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+
+  width: 100%;
 `;
 
 export const Error = styled.div`
@@ -167,5 +156,5 @@ export const Error = styled.div`
 
   text-align: start;
   font-size: 12px;
-  color: #fea55f;
+  color: ${vars.accentOrange};
 `;

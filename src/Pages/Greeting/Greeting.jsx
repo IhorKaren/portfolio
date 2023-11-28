@@ -6,11 +6,11 @@ import {
   CommentsList,
   LinkThumb,
   Link,
-  AccentColor,
   Decoration,
   GreenStain,
   BlueStain,
 } from './Greeting.styled';
+import { Blue, Green} from 'components/App.styled';
 import FloatingDust from 'components/FloatingDust/FloatingDust';
 
 const Greeting = () => {
@@ -33,8 +33,8 @@ const Greeting = () => {
           </CommentsList>
           <LinkThumb>
             <span>
-              <AccentColor>const</AccentColor>{' '}
-              <AccentColor>githubLink</AccentColor> <AccentColor>=</AccentColor>{' '}
+              <Blue>const</Blue>{' '}
+              <Green>githubLink</Green> ={' '}
             </span>
             <Link
               href="https://github.com/IhorKaren"

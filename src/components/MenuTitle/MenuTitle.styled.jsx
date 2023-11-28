@@ -1,4 +1,5 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
+import { vars } from 'components/App.styled';
 
 export const TitleWrap = styled.div`
   width: 100%;
@@ -8,7 +9,7 @@ export const TitleWrap = styled.div`
 
   @media screen and (min-width: 768px) {
     background-color: transparent;
-    border-bottom: 1px solid rgb(30, 45, 61);
+    border-bottom: ${vars.darkBorder};
   }
 `;
 
@@ -16,7 +17,7 @@ export const Title = styled.h3`
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #fff;
+  color: ${vars.primaryWhiteColor};
 
   font-weight: 400;
   font-size: 16px;

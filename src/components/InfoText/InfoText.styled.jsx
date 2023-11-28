@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const TextList = styled.ul`
   position: relative;
@@ -11,17 +11,6 @@ export const TextList = styled.ul`
   gap: 8px;
 
   overflow-y: scroll;
-
-  ::-webkit-scrollbar {
-    background-color: #011627;
-    width: 8px;
-
-    border-left: 1px solid #1e2d3d;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: #607b96;
-  }
 
   @media screen and (min-width: 768px) {
     max-height: 100%;

@@ -1,8 +1,9 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
+import { vars } from 'components/App.styled';
 import { Link, NavLink } from 'react-router-dom';
 
 export const PageAside = styled.aside`
-  background-color: #011627;
+  background-color: ${vars.primaryBgColor};
 
   overflow: hidden;
 
@@ -13,7 +14,7 @@ export const PageAside = styled.aside`
     height: 100%;
     width: 260px;
 
-    border-right: 1px solid #1e2d3d;
+    border-right: ${vars.darkBorder};
   }
 
   @media screen and (min-width: 1200px) {
@@ -26,8 +27,8 @@ export const AsideNav = styled.nav`
 
   @media screen and (min-width: 1200px) {
     display: block;
-    border-right: 1px solid #1e2d3d;
-    background-color: #011627;
+    border-right: ${vars.darkBorder};
+    background-color: ${vars.primaryBgColor};
   }
 `;
 
@@ -48,12 +49,12 @@ export const AsideLink = styled(NavLink)`
   transition: color 200ms linear;
 
   &.active {
-    color: #fff;
+    color: ${vars.primaryWhiteColor};
   }
 
   &:hover,
   &:focus {
-    color: #fff;
+    color: ${vars.primaryWhiteColor};
   }
 `;
 
@@ -72,7 +73,7 @@ export const SubHeader = styled.div`
 
     padding-left: 300px;
 
-    border-bottom: 1px solid #1e2d3d;
+    border-bottom: ${vars.darkBorder};
   }
 `;
 
@@ -95,7 +96,7 @@ export const Wrap = styled.div`
   gap: 50px;
   padding: 10px 14px;
 
-  border-right: 1px solid #1e2d3d;
+  border-right: ${vars.darkBorder};
 `;
 
 export const HomeLink = styled(Link)`

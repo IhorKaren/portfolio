@@ -1,9 +1,10 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
+import { vars } from 'components/App.styled';
 
 export const Border = styled.div`
   width: 100%;
 
-  border-top: 1px solid #1e2d3d;
+  border-top: ${vars.darkBorder};
 `;
 
 export const ContactsList = styled.ul`
@@ -18,13 +19,12 @@ export const ContanctLink = styled.p`
   align-items: center;
   gap: 10px;
 
-  color: #607b96;
   text-decoration: none;
 
   transition: color 200ms linear;
 
   &:hover,
   &:focus {
-    color: #fff;
+    color: ${vars.darkBorder};
   }
 `;

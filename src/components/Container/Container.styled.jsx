@@ -1,4 +1,5 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
+import { vars } from 'components/App.styled';
 
 export const Container = styled.div`
   position: relative;
@@ -6,15 +7,15 @@ export const Container = styled.div`
   height: 100%;
 
   border-radius: 8px;
-  border: 1px solid #1e2d3d;
-  background-color: #011627;
+  border: ${vars.darkBorder};
+  background-color: ${vars.primaryBgColor};
 
   overflow: hidden;
 `;
 
 export const PageContainer = styled.div`
   height: 100%;
-  border-top: 1px solid #1e2d3d;
+  border-top: ${vars.darkBorder};
 
   @media screen and (min-width: 768px) {
     display: flex;
