@@ -30,7 +30,7 @@ export const textColor = keyframes`
       color: ${vars.accentBlue};
     }
     50% {
-      color: ${vars.Green};
+      color: ${vars.accentGreen};
     }
     100% {
       color: ${vars.accentBlue};
@@ -42,7 +42,7 @@ export const borderColor = keyframes`
       border-color: ${vars.accentBlue};
     }
     50% {
-      border-color: ${vars.Green};
+      border-color: ${vars.accentGreen};
     }
     100% {
       border-color: ${vars.accentBlue};

@@ -1,5 +1,35 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { vars } from 'components/App.styled';
+
+export const animateBgBlue = keyframes`
+  0% {
+      background: ${vars.accentBlue};
+    }
+    25% {
+      background: ${vars.accentGreen};
+    }
+    75% {
+      background: ${vars.accentViolet};
+    }
+    100% {
+      background: ${vars.accentBlue};
+    }
+`;
+
+export const animateBgGreen = keyframes`
+  0% {
+      background: ${vars.accentGreen};
+    }
+    25% {
+      background: ${vars.accentViolet};
+    }
+    75% {
+      background: ${vars.accentBlue};
+    }
+    100% {
+      background: ${vars.accentGreen};
+    }
+`;
 
 export const Thumb = styled.div`
   position: relative;
@@ -87,13 +117,17 @@ export const GreenStain = styled.div`
   border-radius: 100% 20%;
   background: ${vars.accentGreen};
   opacity: 0.4;
-  filter: blur(87px);
+  filter: blur(97px);
 
   @media screen and (min-width: 475px) {
     left: 50%;
     top: 15%;
     width: 454px;
     height: 492px;
+  }
+
+  @media screen and (min-width: 768px) {
+    animation: ${animateBgBlue} 30s ease infinite;
   }
 `;
 
@@ -109,7 +143,7 @@ export const BlueStain = styled.div`
 
   background: ${vars.accentBlue};
   opacity: 0.4;
-  filter: blur(87px);
+  filter: blur(97px);
 
   @media screen and (min-width: 475px) {
     left: 50%;
@@ -117,5 +151,9 @@ export const BlueStain = styled.div`
     width: 454px;
     height: 492px;
     transform: translateX(50%);
+  }
+
+  @media screen and (min-width: 768px) {
+    animation: ${animateBgGreen} 30s ease infinite;
   }
 `;

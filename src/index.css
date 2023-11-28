@@ -42,6 +42,11 @@ body {
   ::-webkit-scrollbar-thumb {
     background-color: #607b96;
   }
+
+  ::selection {
+    color: #ffffff;
+    background: #4f5aac;
+  }
 }
 
 code {
