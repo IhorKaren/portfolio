@@ -80,21 +80,25 @@ export const backlight = (
   animation: ${animateGlow} ${duration} ease infinite;
 `;
 
-export const Green = styled.span`
+const Span = styled.span`
+  display: inline-flex;
+`;
+
+export const Green = styled(Span)`
   color: ${vars.accentGreen};
 `;
 
-export const Blue = styled.span`
+export const Blue = styled(Span)`
   color: ${vars.accentBlue};
 `;
-export const Orange = styled.span`
+export const Orange = styled(Span)`
   color: ${vars.accentOrange};
 `;
 
-export const Violet = styled.span`
+export const Violet = styled(Span)`
   color: ${vars.accentViolet};
 `;
 
-export const Gray = styled.span`
+export const Gray = styled(Span)`
   color: ${vars.accentGray};
 `;

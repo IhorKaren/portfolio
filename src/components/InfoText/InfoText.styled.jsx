@@ -10,7 +10,7 @@ export const TextList = styled.ul`
 
   gap: 8px;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 
   @media screen and (min-width: 768px) {
     max-height: 100%;
