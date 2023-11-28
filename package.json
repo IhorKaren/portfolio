@@ -1,8 +1,5 @@
 {
-  "name": "react-template",
-  "version": "0.1.0",
   "private": true,
-  "homepage": "ihorkaren-portfolio.vercel.app",
   "dependencies": {
     "@formkit/auto-animate": "^0.8.1",
     "@hookform/resolvers": "^3.3.2",
