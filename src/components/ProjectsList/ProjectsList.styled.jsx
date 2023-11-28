@@ -121,6 +121,7 @@ export const IconItem = styled.li`
   display: flex;
 
   border-radius: 4px;
+  color: #000;
 
   overflow: hidden;
 `;
