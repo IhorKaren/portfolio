@@ -3,7 +3,7 @@ import Aside from 'components/Aside/Aside';
 import Filter from 'components/Filter/Filter';
 import { PageContainer } from 'components/Container/Container.styled';
 import ProjectsList from 'components/ProjectsList/ProjectsList';
-import { getAllProjects } from 'services/projectsApi';
+import { getAllProjects } from 'services/api';
 import Skeleton from 'components/Skeleton/Skeleton';
 
 const Projects = () => {

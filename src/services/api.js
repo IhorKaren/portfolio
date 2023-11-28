@@ -11,3 +11,13 @@ export const getAllProjects = async () => {
     console.log(error);
   }
 };
+
+export const getActualResume = async () => {
+  try {
+    const resuslt = await axios.get('/cv');
+
+    return resuslt.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

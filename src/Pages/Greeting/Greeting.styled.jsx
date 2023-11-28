@@ -38,15 +38,19 @@ export const Thumb = styled.div`
 
   flex-direction: column;
 
-  gap: 120px;
+  gap: 80px;
 
-  padding: 95px 27px 27px 27px;
+  padding: 95px 14px 10px 14px;
   align-content: space-around;
 
   @media screen and (min-width: 768px) {
-    padding-top: 200px;
+    padding: 160px 27px 27px 27px;
     padding-left: 15%;
-    gap: 80px;
+    gap: 120px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 200px;
   }
 `;
 
@@ -78,11 +82,17 @@ export const SubTitle = styled.h2`
 export const CommentsList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
   margin-bottom: 10px;
 `;
 
-export const LinkThumb = styled.div`
+export const ListLinks = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+`;
+
+export const LinkItem = styled.li`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -90,7 +100,8 @@ export const LinkThumb = styled.div`
 
 export const Link = styled.a`
   text-decoration: none;
-
+  overflow-y: auto;
+  overflow-wrap: break-word;
   color: ${vars.accentOrange};
 
   transition: color ${vars.timingFunction};
