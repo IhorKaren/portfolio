@@ -21,12 +21,13 @@ export const PageContainer = styled.div`
     display: flex;
     align-items: flex-start;
     width: 100%;
-    padding-left: 300px;
+    padding-left: 260px;
 
     border-top: none;
   }
 
   @media screen and (min-width: 1200px) {
+    padding-left: 300px;
     margin-left: auto;
   }
 `;
