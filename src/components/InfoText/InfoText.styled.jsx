@@ -12,7 +12,12 @@ export const TextList = styled.ul`
 
   overflow-y: auto;
 
+  &::-webkit-scrollbar {
+    border-right: 1px solid #1e2d3d;
+  }
+
   @media screen and (min-width: 768px) {
+    min-width: 700px;
     max-height: 100%;
 
     padding: 20px 20px 200px 40px;

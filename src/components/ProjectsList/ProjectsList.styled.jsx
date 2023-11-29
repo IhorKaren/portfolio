@@ -28,6 +28,12 @@ export const ProjectsItem = styled.li`
   border-radius: 15px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border: ${vars.darkBorder};
+  transform: scale(1);
+  transition: transform ${vars.timingFunction};
+
+  &:hover {
+    transform: scale(1.01);
+  }
 
   &::after {
     ${backlight(

@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react';
-import { getActualResume } from 'services/api';
 import {
   Thumb,
   Caption,
@@ -17,25 +15,6 @@ import { Blue, Green } from 'components/App.styled';
 import FloatingDust from 'components/FloatingDust/FloatingDust';
 
 const Greeting = () => {
-  const [resume, setRecume] = useState({
-    id: 1,
-    link: '/',
-  });
-
-  useEffect(() => {
-    const getCv = async () => {
-      try {
-        const response = await getActualResume();
-
-        setRecume(response[0]);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    getCv();
-  }, []);
-
   return (
     <>
       <Thumb>
@@ -70,8 +49,12 @@ const Greeting = () => {
               <span>
                 <Blue>const</Blue> <Green>resumeLink</Green> ={' '}
               </span>
-              <Link href={resume.link} target="_blank" rel="noreferrer">
-                “https://drive.google.com/file”
+              <Link
+                href="https://drive.google.com/drive/folders/17GRY3580t0IVHR97RMq3McOf8YSxI2rN"
+                target="_blank"
+                rel="noreferrer"
+              >
+                “https://drive.google.com/folder”
               </Link>
             </LinkItem>
           </ListLinks>

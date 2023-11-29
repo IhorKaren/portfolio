@@ -18,7 +18,6 @@ const FormDecoration = ({ name, email, message }) => {
           <DecorateItem>
             <DecorateNumber>1</DecorateNumber>
             <Pre>
-              {' '}
               <Violet>const</Violet> button <Violet>=</Violet> document
               <Gray>.</Gray>querySelector<Gray>(</Gray>
               <Orange>'#sendBtn'</Orange>
@@ -31,7 +30,7 @@ const FormDecoration = ({ name, email, message }) => {
           <DecorateItem>
             <DecorateNumber>3</DecorateNumber>
             <Pre>
-              <Violet> const</Violet> message <Violet>=</Violet>{' '}
+              <Violet> const</Violet> message <Violet>= </Violet>
               <Gray>&#123;</Gray>
             </Pre>
           </DecorateItem>
@@ -58,7 +57,6 @@ const FormDecoration = ({ name, email, message }) => {
           <DecorateItem>
             <DecorateNumber>8</DecorateNumber>
             <Pre>
-              {' '}
               <Gray>&#125;</Gray>
             </Pre>
           </DecorateItem>
@@ -77,7 +75,6 @@ const FormDecoration = ({ name, email, message }) => {
           <DecorateItem>
             <DecorateNumber>11</DecorateNumber>
             <Pre>
-              {' '}
               form.send<Gray>(</Gray>message<Gray>);</Gray>
             </Pre>
           </DecorateItem>
