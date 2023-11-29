@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { vars, borderColor, animateShadow } from 'components/App.styled';
+import { vars, animateShadow } from 'components/App.styled';
 
 export const StyledForm = styled.form`
   display: flex;

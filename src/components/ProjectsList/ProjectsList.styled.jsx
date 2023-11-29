@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { textColor, borderColor, backlight, vars } from 'components/App.styled';
+import { textColor, backlight, vars } from 'components/App.styled';
 
 
 export const ProjectsStyledList = styled.ul`
