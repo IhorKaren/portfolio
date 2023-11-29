@@ -6,9 +6,9 @@ import {
   ProjectTitle,
   IconsList,
   IconItem,
-  Button,
   Wrap,
 } from './ProjectsList.styled';
+import { Button } from 'components/App.styled';
 import tagToIconConverter from 'services/tagToIconConverter';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import LazyImage from 'components/LazyImage/LazyImage';

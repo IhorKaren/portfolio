@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { textColor, borderColor, backlight, vars } from 'components/App.styled';
 
+
 export const ProjectsStyledList = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -130,25 +131,4 @@ export const IconItem = styled.li`
   color: #000;
 
   overflow: hidden;
-`;
-
-export const Button = styled.button`
-  padding: 10px 14px;
-
-  border-radius: 8px;
-  border: 1px solid transparent;
-
-  color: ${vars.primaryTextColor};
-  background-color: transparent;
-
-  transition: background-color ${vars.timingFunction},
-    color ${vars.timingFunction};
-  animation: ${borderColor} ${vars.keyframeFunction};
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    color: ${vars.primaryWhiteColor};
-    background-color: ${vars.secondaryBgColor};
-  }
 `;

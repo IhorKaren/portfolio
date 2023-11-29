@@ -11,3 +11,13 @@ export const getAllProjects = async () => {
     console.log(error);
   }
 };
+
+export const sendMessage = async message => {
+  try {
+    const resuslt = await axios.post('/message', { ...message });
+
+    return resuslt;
+  } catch (error) {
+    console.log(error);
+  }
+};

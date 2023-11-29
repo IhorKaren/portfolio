@@ -8,14 +8,13 @@ export const StyledForm = styled.form`
 
   width: 100%;
   height: 100%;
-  padding: 40px 15px 320px 15px;
-  gap: 28px;
+  padding: 60px 15px 320px 15px;
+  gap: 48px;
 
   overflow-y: scroll;
 
   @media screen and (min-width: 768px) {
     padding: 150px 15px 160px 15px;
-    gap: 48px;
     border-top: none;
   }
 `;
@@ -110,34 +109,6 @@ export const StyledTextArea = styled.textarea`
 
   @media screen and (min-width: 768px) {
     height: 145px;
-  }
-`;
-
-export const SubmitButton = styled.button`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-
-  color: ${vars.primaryTextColor};
-
-  background-color: transparent;
-
-  border: 1px solid transparent;
-  border-radius: 8px;
-
-  font-family: ${vars.fontFamily};
-
-  cursor: pointer;
-
-  transition: background-color ${vars.timingFunction},
-    color ${vars.timingFunction};
-  animation: ${borderColor} ${vars.keyframeFunction};
-
-  &:hover,
-  &:focus {
-    color: ${vars.primaryWhiteColor};
-    background-color: ${vars.primaryBgColor};
   }
 `;
 

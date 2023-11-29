@@ -102,3 +102,31 @@ export const Violet = styled(Span)`
 export const Gray = styled(Span)`
   color: ${vars.accentGray};
 `;
+
+export const Button = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+
+  color: ${vars.primaryTextColor};
+
+  background-color: transparent;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  font-family: ${vars.fontFamily};
+
+  cursor: pointer;
+
+  transition: background-color ${vars.timingFunction},
+    color ${vars.timingFunction};
+  animation: ${borderColor} ${vars.keyframeFunction};
+
+  &:hover,
+  &:focus {
+    color: ${vars.primaryWhiteColor};
+    background-color: ${vars.primaryBgColor};
+  }
+`;

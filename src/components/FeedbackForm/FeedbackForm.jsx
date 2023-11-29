@@ -8,20 +8,20 @@ import {
   StyledLabel,
   StyledInput,
   StyledTextArea,
-  SubmitButton,
   AnimatedErrorBox,
   Error,
 } from './FeedbackForm.styled';
+import { Button } from 'components/App.styled';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 
 const schema = Yup.object().shape({
-  name: Yup.string().required('name is required!').min(2),
-  email: Yup.string().required('email is required!').email(),
-  message: Yup.string().required('message is required!').min(10),
+  name: Yup.string().required('name is required!').min(2).trim(),
+  email: Yup.string().required('email is required!').email().trim(),
+  text: Yup.string().required('message is required!').min(10).trim(),
 });
 
 const FeedbackForm = ({
-  sendFeedback,
+  formSubmit,
   onNameChange,
   onEmailChange,
   onMassegeChange,
@@ -38,6 +38,7 @@ const FeedbackForm = ({
   });
 
   const onSubmit = (data, e) => {
+    formSubmit(data);
     reset();
   };
 
@@ -82,13 +83,13 @@ const FeedbackForm = ({
               type="text"
               id="message"
               placeholder="Your message..."
-              {...register('message')}
+              {...register('text')}
               onChange={onMassegeChange}
             />
           </InputWrap>
-          {errors.message && <Error>{errors.message?.message}</Error>}
+          {errors.text && <Error>{errors.text?.message}</Error>}
         </AnimatedErrorBox>
-        <SubmitButton type="submit">submit-message</SubmitButton>
+        <Button type="submit">submit-message</Button>
       </StyledForm>
     </>
   );
