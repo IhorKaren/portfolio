@@ -117,8 +117,10 @@ export const Button = styled.button`
   border-radius: 8px;
 
   font-family: ${vars.fontFamily};
+  font-size: 14px;
 
   cursor: pointer;
+  text-decoration: none;
 
   transition: background-color ${vars.timingFunction},
     color ${vars.timingFunction};

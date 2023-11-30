@@ -8,6 +8,7 @@ import Bio from 'Pages/Bio/Bio';
 import Interests from 'Pages/Interests/Interests';
 import Education from 'Pages/Education/Education';
 import Projects from 'Pages/Projects/Projects';
+import Project from './Project/Project';
 import Contact from 'Pages/Contact/Contact';
 
 export const App = () => {
@@ -29,7 +30,9 @@ export const App = () => {
           <Route path="interests" element={<Interests />} />
           <Route path="education" element={<Education />} />
         </Route>
-        <Route path="projects" element={<Projects />} />
+        <Route path="projects" element={<Projects />}>
+          <Route path=":projectID" element={<Project />} />
+        </Route>
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<Greeting />} />
       </Route>

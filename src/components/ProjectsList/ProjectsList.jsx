@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom';
 import {
   ProjectsStyledList,
   ProjectsItem,
@@ -19,6 +20,9 @@ const ProjectsList = ({ array, filter }) => {
   const kebabTitleEdit = title => {
     return title.toLowerCase().split(' ').join('-');
   };
+
+  const location = useLocation();
+  const routeName = location.pathname.includes('/projects') ? '' : 'projects/';
 
   return (
     <ProjectsStyledList ref={parent}>
@@ -49,7 +53,13 @@ const ProjectsList = ({ array, filter }) => {
                 })}
               </IconsList>
               <Wrap>
-                <Button type="button">project-info</Button>
+                <Button
+                  as={Link}
+                  to={`${routeName}${el._id}`}
+                  state={{ object: el, from: location }}
+                >
+                  project-info
+                </Button>
               </Wrap>
             </ProjectsItem>
           )

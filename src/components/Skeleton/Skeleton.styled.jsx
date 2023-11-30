@@ -124,8 +124,8 @@ export const SkeletonWrap = styled.div`
 `;
 
 export const SkeletonButton = styled.div`
-  width: 95px;
-  height: 37px;
+  width: 130px;
+  height: 41px;
 
   border-radius: 8px;
 

@@ -9,6 +9,7 @@ export const PageAside = styled.aside`
 
   @media screen and (min-width: 768px) {
     position: absolute;
+    z-index: 1;
     left: 0;
     display: flex;
     height: 100%;

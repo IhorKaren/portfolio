@@ -14,17 +14,18 @@ export const ContactsList = styled.ul`
   padding: 10px 14px;
 `;
 
-export const ContanctLink = styled.p`
-  display: flex;
+export const ContanctLink = styled.a`
+  display: inline-flex;
   align-items: center;
   gap: 10px;
 
+  color: ${vars.primaryTextColor};
   text-decoration: none;
 
   transition: color 200ms linear;
 
   &:hover,
   &:focus {
-    color: ${vars.darkBorder};
+    color: ${vars.primaryWhiteColor};
   }
 `;

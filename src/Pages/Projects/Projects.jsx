@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
 import Aside from 'components/Aside/Aside';
 import Filter from 'components/Filter/Filter';
 import { PageContainer } from 'components/Container/Container.styled';
 import ProjectsList from 'components/ProjectsList/ProjectsList';
 import { getAllProjects } from 'services/api';
 import Skeleton from 'components/Skeleton/Skeleton';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [checkedCheckboxes, setCheckedCheckboxes] = useState([]);
+  const [parent] = useAutoAnimate();
 
   useEffect(() => {
     async function getProjectsList() {
@@ -51,6 +54,9 @@ const Projects = () => {
         ) : (
           <ProjectsList array={projects} filter={checkedCheckboxes} />
         )}
+        <div ref={parent}>
+          <Outlet />
+        </div>
       </PageContainer>
     </>
   );
