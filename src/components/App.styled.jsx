@@ -107,6 +107,7 @@ export const Button = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   padding: 10px 14px;
 
   color: ${vars.primaryTextColor};

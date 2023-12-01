@@ -77,18 +77,6 @@ export const ProjectsItem = styled.li`
     }
   }
 `;
-export const Wrap = styled.div`
-  display: flex;
-  height: 100%;
-  align-items: flex-end;
-  z-index: 1;
-  padding: 20px 20px;
-
-  background-color: ${vars.primaryBgColor};
-
-  border-radius: 0 0 15px 15px;
-  overflow: hidden;
-`;
 
 export const TitleWrap = styled.div`
   position: absolute;
@@ -97,6 +85,36 @@ export const TitleWrap = styled.div`
   gap: 8px;
   transform: translateY(-100%);
   padding-bottom: 14px;
+`;
+
+export const Wrap = styled.div`
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  z-index: 1;
+  padding: 10px 14px;
+
+  background-color: ${vars.primaryBgColor};
+
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+`;
+
+export const TextWrap = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: auto;
+`;
+
+export const Type = styled.p`
+  font-size: 14px;
 `;
 
 export const Accent = styled.span`
@@ -117,7 +135,7 @@ export const ProjectImage = styled.img`
 export const IconsList = styled.ul`
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 14px;
   z-index: 3;
   display: flex;
   gap: 10px;

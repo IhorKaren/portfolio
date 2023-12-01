@@ -25,8 +25,6 @@ const Project = () => {
     setProject(location.state.object);
   }, [location]);
 
-  console.log(project);
-
   const handleBackDropClick = e => {
     if (e.target === e.currentTarget) {
       navigate(backLinkLocationRef.current);
