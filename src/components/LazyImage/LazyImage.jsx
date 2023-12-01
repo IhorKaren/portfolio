@@ -20,7 +20,7 @@ const LazyImage = ({ src, width, height, alt }) => {
         onLoad={handleImageLoad}
         loading="lazy"
       />
-      {!isLoaded && <SkeletonImage></SkeletonImage>}
+      {!isLoaded && <SkeletonImage style={{ width, height }}></SkeletonImage>}
     </>
   );
 };

@@ -101,6 +101,8 @@ export const SkeletonTitle = styled.div`
 
 export const SkeletonImage = styled.div`
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
   width: 338px;
   height: 129px;

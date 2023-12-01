@@ -2,7 +2,17 @@ import { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { BsXLg } from 'react-icons/bs';
-import { BackDrop, ProjectWindow, CloseButton } from './Project.styled';
+import {
+  BackDrop,
+  ProjectWindow,
+  CloseButton,
+  Wrap,
+  Title,
+  LinksWrap,
+  Text,
+} from './Project.styled';
+import LazyImage from 'components/LazyImage/LazyImage';
+import { Button } from 'components/App.styled';
 
 const Project = () => {
   const [project, setProject] = useState(null);
@@ -29,6 +39,40 @@ const Project = () => {
         <CloseButton to={backLinkLocationRef.current}>
           <BsXLg strokeWidth={1} size={18} />
         </CloseButton>
+        {project && (
+          <>
+            <LazyImage
+              src={project.preview}
+              width={720}
+              height={273}
+              alt={project.name}
+            />
+            <Wrap>
+              <Title>{project.name}</Title>
+              <Text>{project.text}</Text>
+              <LinksWrap>
+                <Button
+                  as={'a'}
+                  href={project.links.repository}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  repository
+                </Button>
+                {project.links.livepage && (
+                  <Button
+                    as={'a'}
+                    href={project.links.livepage}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    livepage
+                  </Button>
+                )}
+              </LinksWrap>
+            </Wrap>
+          </>
+        )}
       </ProjectWindow>
     </BackDrop>
   );

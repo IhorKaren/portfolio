@@ -6,6 +6,7 @@ export const BackDrop = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  padding: 14px;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -17,25 +18,50 @@ export const BackDrop = styled.div`
 `;
 
 export const ProjectWindow = styled.div`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 800px;
-  height: 600px;
+  position: relative;
+  width: 100%;
+  max-width: 720px;
 
   border-radius: 15px;
-  border: 1px solid #1e2d3d;
+  border: ${vars.darkBorder};
+  background-color: ${vars.secondaryBgColor};
 
-  background: #011221;
+  overflow: hidden;
+  overflow-y: auto;
 `;
 
 export const CloseButton = styled(Link)`
   position: absolute;
+  display: flex;
   top: 15px;
   right: 15px;
+  padding: 5px;
 
-  color: ${vars.primaryTextColor};
+  color: ${vars.primaryWhiteColor};
+  background-color: ${vars.secondaryBgColor};
 
   text-decoration: none;
 `;
+
+export const Wrap = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+  gap: 14px;
+  padding: 14px;
+  background-color: ${vars.secondaryBgColor};
+`;
+
+export const Title = styled.h2`
+  font-size: 18px;
+  font-weight: 400;
+`;
+
+export const LinksWrap = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+`;
+
+export const Text = styled.p``;

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { textColor, backlight, vars } from 'components/App.styled';
 
-
 export const ProjectsStyledList = styled.ul`
   display: flex;
   flex-wrap: wrap;

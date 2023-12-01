@@ -27,26 +27,24 @@ const ProjectsList = ({ array, filter }) => {
   return (
     <ProjectsStyledList ref={parent}>
       {array.map((el, i) => {
+        const { _id, name, preview, technologies } = el;
+
         const isItemShow =
-          filter.length === 0 || filter.every(tag => el.tags.includes(tag));
+          filter.length === 0 ||
+          filter.every(tag => technologies.includes(tag));
 
         return (
           isItemShow && (
-            <ProjectsItem key={el._id}>
+            <ProjectsItem key={_id}>
               <TitleWrap>
                 <Accent>Project {i + 1}</Accent>
                 <ProjectTitle>
-                  <span>{'//'}</span> _{kebabTitleEdit(el.name)}
+                  <span>{'//'}</span> _{kebabTitleEdit(name)}
                 </ProjectTitle>
               </TitleWrap>
-              <LazyImage
-                src={el.preview}
-                width={338}
-                height={129}
-                alt={el.name}
-              />
+              <LazyImage src={preview} width={338} height={129} alt={name} />
               <IconsList>
-                {el.tags.map((el, index) => {
+                {technologies.map((el, index) => {
                   return (
                     <IconItem key={index}>{tagToIconConverter(el)}</IconItem>
                   );
@@ -55,7 +53,7 @@ const ProjectsList = ({ array, filter }) => {
               <Wrap>
                 <Button
                   as={Link}
-                  to={`${routeName}${el._id}`}
+                  to={`${routeName}${_id}`}
                   state={{ object: el, from: location }}
                 >
                   project-info
