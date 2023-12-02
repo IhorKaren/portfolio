@@ -6,6 +6,7 @@ const text =
 const Bio = () => {
   return (
     <>
+      <h1 className="visually-hidden">About me</h1>
       <InfoText text={text} />
     </>
   );

@@ -6,6 +6,7 @@ const text =
 const Interests = () => {
   return (
     <>
+      <h1 className="visually-hidden">My interests</h1>
       <InfoText text={text} />
     </>
   );

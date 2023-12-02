@@ -37,10 +37,18 @@ export const CloseButton = styled(Link)`
   right: 15px;
   padding: 5px;
 
-  color: ${vars.primaryWhiteColor};
+  border-radius: 50%;
+  color: ${vars.primaryTextColor};
   background-color: ${vars.secondaryBgColor};
 
+  transition: color ${vars.timingFunction};
+
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: ${vars.primaryWhiteColor};
+  }
 `;
 
 export const Wrap = styled.div`

@@ -45,6 +45,7 @@ const Projects = () => {
 
   return (
     <>
+      <h1 className="visually-hidden">My projects</h1>
       <Aside text="projects">
         <Filter onChange={onFilterChange} />
       </Aside>

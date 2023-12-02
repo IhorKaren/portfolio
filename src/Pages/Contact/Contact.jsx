@@ -46,6 +46,7 @@ const Contact = () => {
 
   return (
     <>
+      <h1 className="visually-hidden">Contact me</h1>
       <Aside text="communication">
         <Contacts />
       </Aside>

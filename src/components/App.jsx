@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import { Routes, Route } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Layout from './Layout/Layout';
@@ -11,7 +12,11 @@ import Projects from 'Pages/Projects/Projects';
 import Project from './Project/Project';
 import Contact from 'Pages/Contact/Contact';
 
+const TRACKING_ID = 'G-YDPEDH163E';
+
 export const App = () => {
+  ReactGA.initialize(TRACKING_ID);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -20,6 +25,10 @@ export const App = () => {
       navigate(`/greeting`);
     }
   });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, [location.pathname]);
 
   return (
     <Routes>
