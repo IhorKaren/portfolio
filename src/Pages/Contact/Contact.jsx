@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga4';
 import { useState } from 'react';
 import { sendMessage } from 'services/api';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
@@ -15,6 +16,14 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [formIsShow, setFormIsShow] = useState(true);
   const [parent] = useAutoAnimate();
+
+  const gaEventTracker = status => {
+    ReactGA.event({
+      category: 'FormSubmited',
+      action: 'submit',
+      label: status,
+    });
+  };
 
   const handleNameChange = e => {
     setName(e.target.value);
@@ -34,9 +43,10 @@ const Contact = () => {
 
       if (result.status === 201) {
         setFormIsShow(false);
+        gaEventTracker('Success');
       }
     } catch (error) {
-      console.log(error);
+      gaEventTracker(`${error}`);
     } finally {
       setName('');
       setEmail('');
