@@ -13,9 +13,9 @@ import Project from './Project/Project';
 import Contact from 'Pages/Contact/Contact';
 
 const TRACKING_ID = 'G-YDPEDH163E';
+ReactGA.initialize(TRACKING_ID);
 
 export const App = () => {
-  ReactGA.initialize(TRACKING_ID);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -28,6 +28,7 @@ export const App = () => {
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
+
   }, [location.pathname]);
 
   return (
