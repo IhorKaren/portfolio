@@ -60,7 +60,6 @@ export const Title = styled.h2`
 
 export const LinksWrap = styled.div`
   display: flex;
-  flex-direction: row-reverse;
   gap: 10px;
 `;
 
