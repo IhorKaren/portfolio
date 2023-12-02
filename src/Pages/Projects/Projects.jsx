@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import { Outlet } from 'react-router-dom';
 import Aside from 'components/Aside/Aside';
 import Filter from 'components/Filter/Filter';
@@ -13,6 +14,14 @@ const Projects = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [checkedCheckboxes, setCheckedCheckboxes] = useState([]);
   const [parent] = useAutoAnimate();
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: 'pageview',
+      page: '/projects',
+      title: 'Projects',
+    });
+  });
 
   useEffect(() => {
     async function getProjectsList() {

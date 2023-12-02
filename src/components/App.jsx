@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import { Routes, Route } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Layout from './Layout/Layout';
@@ -16,7 +16,6 @@ const TRACKING_ID = 'G-YDPEDH163E';
 ReactGA.initialize(TRACKING_ID);
 
 export const App = () => {
-
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -25,11 +24,6 @@ export const App = () => {
       navigate(`/greeting`);
     }
   });
-
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-
-  }, [location.pathname]);
 
   return (
     <Routes>

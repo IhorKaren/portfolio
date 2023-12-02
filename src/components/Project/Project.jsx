@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import ReactGA from 'react-ga4';
 
 import { BsXLg } from 'react-icons/bs';
 import {
@@ -20,6 +21,16 @@ const Project = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const backLinkLocationRef = useRef(location.state?.from ?? '/');
+
+  useEffect(() => {
+    if (project) {
+      ReactGA.send({
+        hitType: 'pageview',
+        page: `/projects/${project._id}`,
+        title: project.name,
+      });
+    }
+  });
 
   useEffect(() => {
     setProject(location.state.object);

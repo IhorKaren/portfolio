@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import { sendMessage } from 'services/api';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 
@@ -15,6 +16,14 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [formIsShow, setFormIsShow] = useState(true);
   const [parent] = useAutoAnimate();
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: 'pageview',
+      page: '/contacts',
+      title: 'Contact Page',
+    });
+  });
 
   const handleNameChange = e => {
     setName(e.target.value);
