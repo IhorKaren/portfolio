@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import ReactGA from 'react-ga4';
 import {
   Thumb,
   Caption,
@@ -17,14 +15,6 @@ import { Blue, Green } from 'components/App.styled';
 import FloatingDust from 'components/FloatingDust/FloatingDust';
 
 const Greeting = () => {
-  useEffect(() => {
-    ReactGA.send({
-      hitType: 'pageview',
-      page: '/greeting',
-      title: 'Greeting Page',
-    });
-  });
-
   return (
     <>
       <Thumb>

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ReactGA from 'react-ga4';
 import { Routes, Route } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -16,6 +16,8 @@ const TRACKING_ID = 'G-YDPEDH163E';
 ReactGA.initialize(TRACKING_ID);
 
 export const App = () => {
+  const [isFirstRender, setIsFirstRender] = useState(true);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -24,6 +26,21 @@ export const App = () => {
       navigate(`/greeting`);
     }
   });
+
+  useEffect(() => {
+    if (isFirstRender) {
+      setIsFirstRender(false);
+      return;
+    }
+
+    ReactGA.send({
+      hitType: 'pageview',
+      page: location.pathname,
+      title: location.pathname,
+    });
+
+    console.log('render');
+  }, [isFirstRender, location.pathname]);
 
   return (
     <Routes>
