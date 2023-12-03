@@ -40,17 +40,17 @@ export const Thumb = styled.div`
 
   gap: 80px;
 
-  padding: 95px 14px 10px 14px;
+  padding: 60px 14px 10px 14px;
   align-content: space-around;
 
   @media screen and (min-width: 768px) {
-    padding: 160px 27px 27px 27px;
+    padding: 120px 27px 27px 27px;
     padding-left: 15%;
     gap: 120px;
   }
 
   @media screen and (min-width: 1024px) {
-    padding-top: 200px;
+    padding-top: 180px;
   }
 `;
 
