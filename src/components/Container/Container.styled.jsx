@@ -13,7 +13,7 @@ export const Container = styled.div`
   overflow: hidden;
 `;
 
-export const PageContainer = styled.div`
+export const PageContainer = styled.section`
   height: 100%;
   border-top: ${vars.darkBorder};
 
