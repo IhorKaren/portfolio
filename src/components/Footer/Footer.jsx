@@ -1,3 +1,6 @@
+import { useLocation } from 'react-router-dom';
+import { BsLinkedin, BsTelegram, BsGithub } from 'react-icons/bs';
+
 import {
   PageFooter,
   Hint,
@@ -5,9 +8,6 @@ import {
   SocialListItem,
   SocialLink,
 } from './Footer.styled';
-import { useLocation } from 'react-router-dom';
-
-import { BsLinkedin, BsTelegram, BsGithub } from 'react-icons/bs';
 
 const Footer = () => {
   const location = useLocation();

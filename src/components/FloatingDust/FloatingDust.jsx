@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
-import { Scene } from './FloatingDust.styled';
 import Parallax from 'parallax-js';
+
+import { Scene } from './FloatingDust.styled';
 
 const FloatingDust = () => {
   useEffect(() => {

@@ -113,16 +113,46 @@ export const SkeletonImage = styled.div`
 `;
 
 export const SkeletonWrap = styled.div`
-  display: flex;
+  position: absolute;
+  width: 100%;
   height: 100%;
-  z-index: 1;
-  align-items: flex-end;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
-  padding: 20px 20px;
+  z-index: 1;
+
+  padding: 10px 14px;
 
   background-color: ${vars.primaryBgColor};
 
   border-radius: 0 0 15px 15px;
+`;
+
+export const SkeletonTextWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-bottom: 10px;
+`;
+
+export const SkeletonDescription = styled.div`
+  width: 240px;
+  height: 21px;
+
+  border-radius: 8px;
+
+  animation: ${skeletonLoading} 1s linear infinite alternate;
+`;
+
+export const SkeletonProjectType = styled.div`
+  width: 200px;
+  height: 16px;
+
+  border-radius: 6px;
+
+  animation: ${skeletonLoading} 1s linear infinite alternate;
 `;
 
 export const SkeletonButton = styled.div`

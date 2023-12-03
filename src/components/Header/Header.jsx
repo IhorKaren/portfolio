@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { BsXLg, BsTextRight } from 'react-icons/bs';
+
 import {
   PageHeader,
   Name,
@@ -9,7 +11,6 @@ import {
   MenuButton,
   Backdrop,
 } from './Header.styled';
-import { BsXLg, BsTextRight } from 'react-icons/bs';
 
 const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);

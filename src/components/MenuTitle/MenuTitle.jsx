@@ -1,7 +1,8 @@
-import { TitleWrap, Title } from './MenuTitle.styled';
 import { BsCaretDownFill } from 'react-icons/bs';
 
-const MenuTitle = ({title}) => {
+import { TitleWrap, Title } from './MenuTitle.styled';
+
+const MenuTitle = ({ title }) => {
   return (
     <TitleWrap>
       <Title>

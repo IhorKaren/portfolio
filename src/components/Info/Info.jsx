@@ -1,16 +1,19 @@
-import { InfoList, Arrow, InfoLink } from './Info.styled';
 import { BsFillFolderFill } from 'react-icons/bs';
+
+import { InfoList, Arrow, InfoLink } from './Info.styled';
 import MenuTitle from 'components/MenuTitle/MenuTitle';
 import { Green, Orange, Blue } from 'components/App.styled';
 
 const Info = () => {
+  const size = 12;
+
   return (
     <div>
       <MenuTitle title="personal-info" />
       <InfoList>
         <li>
           <InfoLink to="bio">
-            <Arrow size={12} data="arrow" />
+            <Arrow size={size} data="arrow" />
             <Green>
               <BsFillFolderFill />
             </Green>
@@ -19,7 +22,7 @@ const Info = () => {
         </li>
         <li>
           <InfoLink to="interests">
-            <Arrow size={12} />
+            <Arrow size={size} />
             <Orange>
               <BsFillFolderFill />
             </Orange>
@@ -28,7 +31,7 @@ const Info = () => {
         </li>
         <li>
           <InfoLink to="education">
-            <Arrow size={12} />
+            <Arrow size={size} />
             <Blue>
               <BsFillFolderFill />
             </Blue>

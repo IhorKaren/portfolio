@@ -1,5 +1,6 @@
-import { TextList } from './InfoText.styled';
 import addNumberAndSymbolToEachLine from 'services/addSymbolToEachLine';
+
+import { TextList } from './InfoText.styled';
 
 const InfoText = ({ text }) => {
   const changedText = addNumberAndSymbolToEachLine(text);

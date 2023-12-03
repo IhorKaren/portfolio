@@ -1,4 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
+import tagToIconConverter from 'services/tagToIconConverter';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
+
 import {
   ProjectsStyledList,
   ProjectsItem,
@@ -13,8 +16,6 @@ import {
 } from './ProjectsList.styled';
 import { Blue } from 'components/App.styled';
 import { Button } from 'components/App.styled';
-import tagToIconConverter from 'services/tagToIconConverter';
-import { useAutoAnimate } from '@formkit/auto-animate/react';
 import LazyImage from 'components/LazyImage/LazyImage';
 
 const ProjectsList = ({ array, filter }) => {

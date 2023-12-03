@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
+import { getAllProjects } from 'services/api';
+
+import { PageContainer } from 'components/Container/Container.styled';
 import Aside from 'components/Aside/Aside';
 import Filter from 'components/Filter/Filter';
-import { PageContainer } from 'components/Container/Container.styled';
 import ProjectsList from 'components/ProjectsList/ProjectsList';
-import { getAllProjects } from 'services/api';
 import Skeleton from 'components/Skeleton/Skeleton';
-import { useAutoAnimate } from '@formkit/auto-animate/react';
+
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);

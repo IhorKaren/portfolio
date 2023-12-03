@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import ReactGA from 'react-ga4';
 import { Routes, Route } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
+import ReactGA from 'react-ga4';
+
 import Layout from './Layout/Layout';
 import Greeting from 'Pages/Greeting/Greeting';
 import About from 'Pages/About/About';

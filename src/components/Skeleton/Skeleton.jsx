@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+
 import {
   SkeletonList,
   SkeletonCard,
@@ -6,6 +7,9 @@ import {
   SkeletonTitle,
   SkeletonImage,
   SkeletonWrap,
+  SkeletonDescription,
+  SkeletonProjectType,
+  SkeletonTextWrap,
   SkeletonButton,
 } from './Skeleton.styled';
 
@@ -26,6 +30,10 @@ const Skeleton = ({ quantity }) => {
             </SkeletonTitleWrap>
             <SkeletonImage />
             <SkeletonWrap>
+              <SkeletonTextWrap>
+                <SkeletonDescription></SkeletonDescription>
+                <SkeletonProjectType></SkeletonProjectType>
+              </SkeletonTextWrap>
               <SkeletonButton></SkeletonButton>
             </SkeletonWrap>
           </el.component>

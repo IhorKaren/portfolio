@@ -1,7 +1,9 @@
 import React from 'react';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
 import { useForm } from 'react-hook-form';
+import * as Yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
+
 import {
   StyledForm,
   InputWrap,
@@ -12,7 +14,7 @@ import {
   Error,
 } from './FeedbackForm.styled';
 import { Button } from 'components/App.styled';
-import { useAutoAnimate } from '@formkit/auto-animate/react';
+
 
 const schema = Yup.object().shape({
   name: Yup.string().required('name is required!').min(2).trim(),

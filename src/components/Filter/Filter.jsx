@@ -1,4 +1,3 @@
-import MenuTitle from 'components/MenuTitle/MenuTitle';
 import {
   TbBrandHtml5,
   TbBrandSass,
@@ -8,6 +7,8 @@ import {
   TbBrandNextjs,
   TbBrandNodejs,
 } from 'react-icons/tb';
+
+import MenuTitle from 'components/MenuTitle/MenuTitle';
 import { Form, Label, Input } from './Filter.styled';
 
 const variants = [

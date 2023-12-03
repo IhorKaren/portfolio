@@ -1,4 +1,12 @@
 import {
+  BsXLg,
+  BsTerminalFill,
+  BsEnvelopeFill,
+  BsEasel2Fill,
+  BsPersonBoundingBox,
+} from 'react-icons/bs';
+
+import {
   PageAside,
   SubHeader,
   MobileSubHeader,
@@ -9,13 +17,6 @@ import {
   Wrap,
   HomeLink,
 } from './Aside.styled';
-import {
-  BsXLg,
-  BsTerminalFill,
-  BsEnvelopeFill,
-  BsEasel2Fill,
-  BsPersonBoundingBox,
-} from 'react-icons/bs';
 
 const Aside = ({ text, children }) => {
   return (
