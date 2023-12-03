@@ -45,6 +45,7 @@ const Greeting = () => {
                 “https://github.com/IhorKaren”
               </Link>
             </LinkItem>
+            <p>{'//'} link to current portfolio:</p>
             <LinkItem>
               <span>
                 <Blue>const</Blue> <Green>resumeLink</Green> ={' '}
