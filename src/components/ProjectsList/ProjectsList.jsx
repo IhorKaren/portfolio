@@ -35,7 +35,7 @@ const ProjectsList = ({ array, filter }) => {
 
         const isItemShow =
           filter.length === 0 ||
-          filter.every(tag => technologies.includes(tag));
+          filter.some(tag => technologies.includes(tag));
 
         return (
           isItemShow && (
