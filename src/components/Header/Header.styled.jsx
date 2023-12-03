@@ -42,6 +42,7 @@ export const Nav = styled.nav`
 
   transition: opacity 400ms linear;
   backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
 
   &.open {
     @media screen and (max-width: 1023px) {

@@ -13,6 +13,7 @@ export const BackDrop = styled.div`
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 1200;
   opacity: 1;
 `;
