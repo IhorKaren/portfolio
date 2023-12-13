@@ -133,11 +133,18 @@ export const ProjectImage = styled.img`
 
 export const IconsList = styled.ul`
   position: absolute;
-  top: 10px;
+  top: 8px;
   right: 14px;
   z-index: 3;
   display: flex;
+  padding: 3px;
+  border-radius: 4px;
+  align-items: center;
   gap: 10px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  backdrop-filter: blur(300px);
 `;
 
 export const IconItem = styled.li`

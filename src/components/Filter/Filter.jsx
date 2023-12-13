@@ -1,6 +1,8 @@
 import {
   SiHtml5,
   SiSass,
+  SiTailwindcss,
+  SiMui,
   SiJavascript,
   SiTypescript,
   SiReact,
@@ -15,12 +17,14 @@ import { Form, Label, Input } from './Filter.styled';
 const variants = [
   { id: 1, name: 'HTML', icon: SiHtml5 },
   { id: 2, name: 'SASS', icon: SiSass },
-  { id: 3, name: 'JavaScript', icon: SiJavascript },
-  { id: 4, name: 'TypeScript', icon: SiTypescript },
-  { id: 5, name: 'React', icon: SiReact },
-  { id: 6, name: 'Next.js', icon: SiNextdotjs },
-  { id: 7, name: 'Node.js', icon: SiNodedotjs },
-  { id: 8, name: 'NestJS', icon: SiNestjs },
+  { id: 3, name: 'Tailwind', icon: SiTailwindcss },
+  { id: 4, name: 'MaterialUI', icon: SiMui },
+  { id: 5, name: 'JavaScript', icon: SiJavascript },
+  { id: 6, name: 'TypeScript', icon: SiTypescript },
+  { id: 7, name: 'React', icon: SiReact },
+  { id: 8, name: 'Next.js', icon: SiNextdotjs },
+  { id: 9, name: 'Node.js', icon: SiNodedotjs },
+  { id: 10, name: 'NestJS', icon: SiNestjs },
 ];
 
 const Filter = ({ onChange }) => {
