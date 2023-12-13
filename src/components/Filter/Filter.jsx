@@ -1,24 +1,26 @@
 import {
-  TbBrandHtml5,
-  TbBrandSass,
-  TbBrandJavascript,
-  TbBrandTypescript,
-  TbBrandReact,
-  TbBrandNextjs,
-  TbBrandNodejs,
-} from 'react-icons/tb';
+  SiHtml5,
+  SiSass,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiNestjs,
+} from 'react-icons/si';
 
 import MenuTitle from 'components/MenuTitle/MenuTitle';
 import { Form, Label, Input } from './Filter.styled';
 
 const variants = [
-  { id: 1, name: 'HTML', icon: TbBrandHtml5 },
-  { id: 2, name: 'SASS', icon: TbBrandSass },
-  { id: 3, name: 'JavaScript', icon: TbBrandJavascript },
-  { id: 4, name: 'TypeScript', icon: TbBrandTypescript },
-  { id: 5, name: 'React', icon: TbBrandReact },
-  { id: 6, name: 'Next.js', icon: TbBrandNextjs },
-  { id: 7, name: 'Node.js', icon: TbBrandNodejs },
+  { id: 1, name: 'HTML', icon: SiHtml5 },
+  { id: 2, name: 'SASS', icon: SiSass },
+  { id: 3, name: 'JavaScript', icon: SiJavascript },
+  { id: 4, name: 'TypeScript', icon: SiTypescript },
+  { id: 5, name: 'React', icon: SiReact },
+  { id: 6, name: 'Next.js', icon: SiNextdotjs },
+  { id: 7, name: 'Node.js', icon: SiNodedotjs },
+  { id: 8, name: 'NestJS', icon: SiNestjs },
 ];
 
 const Filter = ({ onChange }) => {
@@ -36,7 +38,7 @@ const Filter = ({ onChange }) => {
                 onChange={onChange}
               />
               <Label htmlFor={el.name} key={el.id}>
-                <el.icon size={24} />
+                <el.icon size={20} />
                 {el.name}
               </Label>
             </div>

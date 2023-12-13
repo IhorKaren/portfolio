@@ -18,8 +18,9 @@ export const Form = styled.form`
 
 export const Label = styled.label`
   display: flex;
+  align-items: center;
   width: 100%;
-  gap: 5px;
+  gap: 10px;
 
   transition: color ${vars.timingFunction};
 

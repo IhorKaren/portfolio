@@ -1,57 +1,83 @@
 import {
-  TbBrandHtml5,
-  TbBrandSass,
-  TbBrandJavascript,
-  TbBrandTypescript,
-  TbBrandReact,
-  TbBrandNextjs,
-  TbBrandNodejs,
-} from 'react-icons/tb';
+  SiHtml5,
+  SiSass,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiNestjs,
+} from 'react-icons/si';
 
 const tagToIconConverter = tag => {
   let icon = '';
   const iconSize = 24;
+  const padding = '2px';
 
   switch (tag.toLowerCase()) {
     case 'html':
       icon = (
-        <TbBrandHtml5 size={iconSize} style={{ backgroundColor: '#FEA55F' }} />
+        <SiHtml5
+          size={iconSize}
+          style={{ backgroundColor: '#FEA55F', padding }}
+        />
       );
       break;
     case 'sass':
       icon = (
-        <TbBrandSass size={iconSize} style={{ backgroundColor: '#cf649a' }} />
+        <SiSass
+          size={iconSize}
+          style={{ backgroundColor: '#cf649a', padding }}
+        />
       );
       break;
     case 'javascript':
       icon = (
-        <TbBrandJavascript
+        <SiJavascript
           size={iconSize}
-          style={{ backgroundColor: '#f7e018' }}
+          style={{ backgroundColor: '#f7e018', padding }}
         />
       );
       break;
     case 'typescript':
       icon = (
-        <TbBrandTypescript
+        <SiTypescript
           size={iconSize}
-          style={{ backgroundColor: '#3178c6' }}
+          style={{ backgroundColor: '#3178c6', padding }}
         />
       );
       break;
     case 'react':
       icon = (
-        <TbBrandReact size={iconSize} style={{ backgroundColor: '#86E1F9' }} />
+        <SiReact
+          size={iconSize}
+          style={{ backgroundColor: '#86E1F9', padding }}
+        />
       );
       break;
     case 'next.js':
       icon = (
-        <TbBrandNextjs size={iconSize} style={{ backgroundColor: '#ffffff' }} />
+        <SiNextdotjs
+          size={iconSize}
+          style={{ backgroundColor: '#ffffff', padding }}
+        />
       );
       break;
     case 'node.js':
       icon = (
-        <TbBrandNodejs size={iconSize} style={{ backgroundColor: '#79b462' }} />
+        <SiNodedotjs
+          size={iconSize}
+          style={{ backgroundColor: '#79b462', padding }}
+        />
+      );
+      break;
+
+    case 'nest.js':
+      icon = (
+        <SiNestjs
+          size={iconSize}
+          style={{ backgroundColor: '#e0234e', padding }}
+        />
       );
       break;
 
