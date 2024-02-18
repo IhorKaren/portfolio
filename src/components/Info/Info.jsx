@@ -12,7 +12,7 @@ const Info = () => {
       <MenuTitle title="personal-info" />
       <InfoList>
         <li>
-          <InfoLink to="bio">
+          <InfoLink to="/about">
             <Arrow size={size} data="arrow" />
             <Green>
               <BsFillFolderFill />

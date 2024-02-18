@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga4';
 
 import Layout from './Layout/Layout';
@@ -41,7 +41,7 @@ export const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Greeting />} />
         <Route path="about" element={<About />}>
-          <Route path="bio" element={<Bio />} />
+          <Route index element={<Bio />} />
           <Route path="interests" element={<Interests />} />
           <Route path="education" element={<Education />} />
         </Route>
