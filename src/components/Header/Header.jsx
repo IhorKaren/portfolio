@@ -25,7 +25,7 @@ const Header = () => {
       <Nav className={menuIsOpen ? 'open' : ''}>
         <NavList>
           <NavItem>
-            <Link to="greeting" onClick={() => setMenuIsOpen(false)}>
+            <Link to="/" onClick={() => setMenuIsOpen(false)}>
               _hello
             </Link>
           </NavItem>

@@ -19,14 +19,7 @@ ReactGA.initialize(TRACKING_ID);
 export const App = () => {
   const [isFirstRender, setIsFirstRender] = useState(true);
 
-  const navigate = useNavigate();
   const location = useLocation();
-
-  useEffect(() => {
-    if (location.pathname === '/') {
-      navigate(`/greeting`);
-    }
-  });
 
   useEffect(() => {
     if (isFirstRender) {

@@ -28,7 +28,7 @@ const Aside = ({ text, children }) => {
         <AsideNav>
           <AsideNavList>
             <li>
-              <AsideLink to="/greeting">
+              <AsideLink to="/">
                 <BsTerminalFill size={28} />
               </AsideLink>
             </li>
